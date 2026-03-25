@@ -1,0 +1,44 @@
+name: Bi-Monthly FMCG Pipeline
+
+# Runs on the 1st and 15th of every month at 9:00 AM IST (3:30 AM UTC)
+on:
+  schedule:
+    - cron: '30 3 1,15 * *'
+  workflow_dispatch:  # Also allows manual trigger from GitHub UI
+
+permissions:
+  contents: write  # Allows the workflow to push commits back to the repo
+
+jobs:
+  run-pipeline:
+    runs-on: ubuntu-latest
+    
+    steps:
+      # 1. Check out the repo
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # 2. Set up Python
+      - name: Set up Python 3.10
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      # 3. Install dependencies
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      # 4. Run the pipeline (live mode)
+      - name: Run FMCG Pipeline
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: python main.py --source live
+
+      # 5. Commit and push updated docs/ files
+      - name: Commit updated newsletter files
+        run: |
+          git config user.name "FMCG Pipeline Bot"
+          git config user.email "pipeline-bot@users.noreply.github.com"
+          git add docs/
+          git diff --staged --quiet || git commit -m "📊 Auto-update: Bi-monthly newsletter $(date +'%Y-%m-%d')"
+          git push
