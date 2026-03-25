@@ -36,8 +36,9 @@
 ## Quick Start
 
 ```bash
-# 1. Clone / navigate to the project
-cd Benori
+# 1. Clone the project
+git clone https://github.com/khushalkumar/fmcg-deal-intelligence.git
+cd fmcg-deal-intelligence
 
 # 2. Create and activate virtual environment
 python3 -m venv venv
