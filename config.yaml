@@ -1,0 +1,119 @@
+# ============================================================
+# FMCG Deal Intelligence Newsletter - Pipeline Configuration
+# ============================================================
+
+pipeline:
+  # Data source: "live" (RSS feeds) or "sample" (local JSON)
+  default_source: "sample"
+  output_dir: "output"
+
+# --- RSS Feed Configuration ---
+rss_feeds:
+  feeds:
+    - name: "Google News - FMCG M&A"
+      url: "https://news.google.com/rss/search?q=FMCG+acquisition+OR+merger+OR+investment+OR+buyout&hl=en-IN&gl=IN&ceid=IN:en"
+    - name: "Google News - Consumer Goods Deals"
+      url: "https://news.google.com/rss/search?q=consumer+goods+deal+OR+acquisition+OR+stake&hl=en&gl=US&ceid=US:en"
+    - name: "Google News - Food Beverage M&A"
+      url: "https://news.google.com/rss/search?q=food+beverage+acquisition+OR+merger+OR+investment&hl=en&gl=US&ceid=US:en"
+  request_timeout: 10
+  
+  # Time-bound filter (syncs perfectly with the 15-day bi-monthly cron job)
+  max_age_days: 15
+
+
+# --- De-duplication Settings ---
+deduplication:
+  # Fuzzy similarity threshold (0.0 to 1.0)
+  # Articles with title+summary similarity >= this value are considered near-duplicates
+  similarity_threshold: 0.80
+
+# --- LLM Settings ---
+llm:
+  model: "gpt-5.4"
+  system_prompt: >
+    You are an expert FMCG financial analyst. Analyze this news article title and summary.
+    Determine if it announces a specific M&A deal or investment involving Fast-Moving Consumer Goods (FMCG).
+    Ignore generic industry outlooks, budget wishes, or general stock advice.
+    Return a JSON object with:
+    - is_fmcg_deal (boolean)
+    - confidence_score (integer 0-100)
+    - buyer (string or null)
+    - target (string or null)
+    - deal_value (string or null)
+    - deal_type (string: 'M&A', 'Investment', 'JV', 'Divestiture', or 'Unknown')
+
+# --- Relevance Scoring ---
+relevance:
+  # Minimum score (0-100) for an article to be included in the newsletter
+  min_score: 50
+
+# --- Source Credibility Tiers ---
+credibility:
+  # Score below which an article is flagged as "low credibility"
+  low_credibility_threshold: 50
+
+  tiers:
+    tier_1:
+      score: 95
+      sources:
+        - "reuters"
+        - "bloomberg"
+        - "financial times"
+        - "wall street journal"
+        - "wsj"
+        - "the economic times"
+        - "economic times"
+        - "associated press"
+        - "ap news"
+
+    tier_2:
+      score: 82
+      sources:
+        - "business standard"
+        - "livemint"
+        - "mint"
+        - "cnbc"
+        - "forbes"
+        - "moneycontrol"
+        - "the hindu businessline"
+        - "fortune"
+        - "business insider"
+        - "the guardian"
+        - "bbc"
+        - "nikkei"
+        - "ft"
+
+    tier_3:
+      score: 65
+      sources:
+        - "foodnavigator"
+        - "food business news"
+        - "just-food"
+        - "confectionerynews"
+        - "dairyreporter"
+        - "cosmetics business"
+        - "global cosmetics news"
+        - "fmcg ceo"
+        - "retail gazette"
+        - "the grocer"
+        - "food manufacture"
+        - "beverage daily"
+        - "food dive"
+        - "cosmetics design"
+        - "ndtv"
+        - "india today"
+        - "zee business"
+        - "firstpost"
+        - "yahoo finance"
+        - "marketwatch"
+
+  # Default score for unrecognized sources
+  unknown_source_score: 40
+
+# --- Newsletter Settings ---
+newsletter:
+  title: "FMCG Deal Intelligence Weekly"
+  subtitle: "M&A, Investments & Strategic Moves in Consumer Goods"
+  max_deals_in_summary: 5
+  group_by: "deal_type"  # Group deals by deal_type in newsletter body

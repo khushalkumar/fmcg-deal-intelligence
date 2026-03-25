@@ -1,0 +1,29 @@
+# Virtual Environment
+venv/
+.venv/
+env/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Output (generated at runtime)
+output/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# Pytest
+.pytest_cache/
+
+# Environment Variables
+.env
+.env.*

@@ -1,0 +1,896 @@
+{
+  "generated_at": "2026-03-24 21:29:41",
+  "title": "FMCG Deal Intelligence Weekly",
+  "subtitle": "M&A, Investments & Strategic Moves in Consumer Goods",
+  "stats": {
+    "total_ingested": 34,
+    "exact_duplicates_removed": 1,
+    "near_duplicates_removed": 0,
+    "after_dedup": 33,
+    "irrelevant_filtered": 9,
+    "after_relevance": 24,
+    "low_credibility_flagged": 2,
+    "final_count": 24,
+    "source_breakdown": {
+      "Economic Times": 4,
+      "CNBC": 2,
+      "LiveMint": 2,
+      "Reuters": 4,
+      "Business Standard": 2,
+      "Financial Times": 1,
+      "Bloomberg": 2,
+      "Forbes": 1,
+      "MoneyControl": 1,
+      "The Guardian": 1,
+      "DealBuzz Blog": 2,
+      "MarketWatch": 1,
+      "Cosmetics Business": 1
+    },
+    "deal_type_breakdown": {
+      "Investment": 7,
+      "JV": 2,
+      "M&A": 13,
+      "Divestiture": 1,
+      "Unknown": 1
+    },
+    "processing_time_seconds": 0.12
+  },
+  "total_deals": 24,
+  "deal_type_counts": {
+    "Investment": 7,
+    "JV": 2,
+    "M&A": 13,
+    "Divestiture": 1,
+    "Unknown": 1
+  },
+  "deals": [
+    {
+      "title": "Marico Picks Up 40% Stake in Vietnamese Coconut Oil Brand CocoViet",
+      "source": "Economic Times",
+      "url": "https://economictimes.indiatimes.com/marico-cocoviet-investment",
+      "published_date": "2026-03-13",
+      "summary": "Indian FMCG company Marico has acquired a 40% stake in CocoViet, a Vietnamese coconut oil and personal care brand, for $35 million. The strategic investment marks Marico's entry into Vietnam's fast-growing personal care market.",
+      "deal_type": "Investment",
+      "deal_value": "$35M",
+      "buyer": "Marico",
+      "target": "CocoViet",
+      "sector": "Personal Care",
+      "region": "Southeast Asia",
+      "relevance_score": 73,
+      "fmcg_keywords_matched": [
+        "fmcg",
+        "personal care"
+      ],
+      "deal_keywords_matched": [
+        "acquire",
+        "investment",
+        "invest",
+        "stake"
+      ],
+      "company_keywords_matched": [
+        "marico"
+      ],
+      "credibility_score": 95,
+      "credibility_tier": "Tier 1 — Premier",
+      "is_low_credibility": false,
+      "combined_score": 81.8
+    },
+    {
+      "title": "P&G and Dabur Announce Joint Venture for Oral Care Products in Southeast Asia",
+      "source": "CNBC",
+      "url": "https://www.cnbc.com/pg-dabur-joint-venture-oral-care",
+      "published_date": "2026-03-17",
+      "summary": "Procter & Gamble and Indian FMCG major Dabur have announced a joint venture to develop and market oral care products across Southeast Asia. The JV will combine P&G's distribution network with Dabur's herbal formulations expertise. Initial investment is pegged at $200 million.",
+      "deal_type": "JV",
+      "deal_value": "$200M",
+      "buyer": "Procter & Gamble / Dabur",
+      "target": "Joint Venture Entity",
+      "sector": "Oral Care",
+      "region": "Southeast Asia",
+      "relevance_score": 78,
+      "fmcg_keywords_matched": [
+        "fmcg",
+        "oral care"
+      ],
+      "deal_keywords_matched": [
+        "investment",
+        "invest",
+        "joint venture"
+      ],
+      "company_keywords_matched": [
+        "procter & gamble",
+        "p&g",
+        "dabur"
+      ],
+      "credibility_score": 82,
+      "credibility_tier": "Tier 2 — Reputable",
+      "is_low_credibility": false,
+      "combined_score": 79.6
+    },
+    {
+      "title": "Unilever takes majority stake in Indian beauty brand GlowNaturals",
+      "source": "LiveMint",
+      "url": "https://www.livemint.com/companies/unilever-glownaturals-stake",
+      "published_date": "2026-03-18",
+      "summary": "Anglo-Dutch consumer goods major Unilever has acquired a 65% stake in Indian personal care startup GlowNaturals for $450 million. The investment is part of Unilever's strategy to expand its presence in the fast-growing ayurvedic beauty segment in India.",
+      "deal_type": "Investment",
+      "deal_value": "$450M",
+      "buyer": "Unilever",
+      "target": "GlowNaturals",
+      "sector": "Personal Care",
+      "region": "India",
+      "relevance_score": 72,
+      "fmcg_keywords_matched": [
+        "consumer goods",
+        "personal care"
+      ],
+      "deal_keywords_matched": [
+        "acquire",
+        "investment",
+        "invest",
+        "stake"
+      ],
+      "company_keywords_matched": [
+        "unilever"
+      ],
+      "credibility_score": 82,
+      "credibility_tier": "Tier 2 — Reputable",
+      "is_low_credibility": false,
+      "combined_score": 76.0
+    },
+    {
+      "title": "Nestlé Acquires High-End Snack Brand Fireside Foods for $2.1 Billion",
+      "source": "Reuters",
+      "url": "https://www.reuters.com/business/nestle-acquires-fireside-foods-2026",
+      "published_date": "2026-03-20",
+      "summary": "Swiss food giant Nestlé has completed the acquisition of US-based premium snack brand Fireside Foods in a deal valued at $2.1 billion. The acquisition strengthens Nestlé's position in the growing health-conscious snacking segment. Fireside Foods, known for its plant-based protein bars and organic trail mixes, recorded revenues of $680 million in 2025.",
+      "deal_type": "M&A",
+      "deal_value": "$2.1B",
+      "buyer": "Nestlé",
+      "target": "Fireside Foods",
+      "sector": "Packaged Snacks",
+      "region": "North America",
+      "relevance_score": 55,
+      "fmcg_keywords_matched": [
+        "food",
+        "snack"
+      ],
+      "deal_keywords_matched": [
+        "acquisition",
+        "acquire",
+        "deal"
+      ],
+      "company_keywords_matched": [
+        "nestle"
+      ],
+      "credibility_score": 95,
+      "credibility_tier": "Tier 1 — Premier",
+      "is_low_credibility": false,
+      "combined_score": 71.0
+    },
+    {
+      "title": "PepsiCo and Britannia Industries Form Joint Venture for Healthy Snacks in India",
+      "source": "Economic Times",
+      "url": "https://economictimes.indiatimes.com/pepsico-britannia-jv",
+      "published_date": "2026-03-08",
+      "summary": "PepsiCo Inc and Britannia Industries have announced a 50:50 joint venture to develop and distribute healthy snack products across India. The JV, with an initial investment of ₹800 crore ($95 million), will leverage PepsiCo's R&D capabilities and Britannia's extensive Indian distribution network.",
+      "deal_type": "JV",
+      "deal_value": "₹800 Cr ($95M)",
+      "buyer": "PepsiCo / Britannia Industries",
+      "target": "Joint Venture Entity",
+      "sector": "Packaged Snacks",
+      "region": "India",
+      "relevance_score": 51,
+      "fmcg_keywords_matched": [
+        "snack"
+      ],
+      "deal_keywords_matched": [
+        "investment",
+        "invest",
+        "joint venture"
+      ],
+      "company_keywords_matched": [
+        "britannia",
+        "pepsico"
+      ],
+      "credibility_score": 95,
+      "credibility_tier": "Tier 1 — Premier",
+      "is_low_credibility": false,
+      "combined_score": 68.6
+    },
+    {
+      "title": "Swiss food giant Nestle announces acquisition of snack maker Fireside Foods",
+      "source": "Business Standard",
+      "url": "https://www.business-standard.com/nestle-fireside-acquisition",
+      "published_date": "2026-03-21",
+      "summary": "In a major FMCG deal, Nestlé has announced the acquisition of Fireside Foods, a US-based snack company known for health-focused products. The deal size is reported at $2.1 billion and marks Nestlé's largest acquisition in the snack segment in five years.",
+      "deal_type": "M&A",
+      "deal_value": "$2.1B",
+      "buyer": "Nestlé",
+      "target": "Fireside Foods",
+      "sector": "Packaged Snacks",
+      "region": "North America",
+      "relevance_score": 58,
+      "fmcg_keywords_matched": [
+        "fmcg",
+        "food",
+        "snack"
+      ],
+      "deal_keywords_matched": [
+        "acquisition",
+        "deal"
+      ],
+      "company_keywords_matched": [
+        "nestle"
+      ],
+      "credibility_score": 82,
+      "credibility_tier": "Tier 2 — Reputable",
+      "is_low_credibility": false,
+      "combined_score": 67.6
+    },
+    {
+      "title": "Danone Divests North American Yogurt Business to Private Equity Firm Meridian Capital",
+      "source": "Financial Times",
+      "url": "https://www.ft.com/content/danone-yogurt-divestiture",
+      "published_date": "2026-03-12",
+      "summary": "French dairy giant Danone has agreed to sell its North American yogurt division to Meridian Capital Partners for $3.8 billion. The divestiture is part of Danone's ongoing portfolio restructuring to focus on premium health and nutrition brands.",
+      "deal_type": "Divestiture",
+      "deal_value": "$3.8B",
+      "buyer": "Meridian Capital Partners",
+      "target": "Danone NA Yogurt Division",
+      "sector": "Dairy",
+      "region": "North America",
+      "relevance_score": 49,
+      "fmcg_keywords_matched": [
+        "dairy",
+        "nutrition"
+      ],
+      "deal_keywords_matched": [
+        "private equity",
+        "divestiture",
+        "divest"
+      ],
+      "company_keywords_matched": [
+        "danone"
+      ],
+      "credibility_score": 95,
+      "credibility_tier": "Tier 1 — Premier",
+      "is_low_credibility": false,
+      "combined_score": 67.4
+    },
+    {
+      "title": "Hindustan Unilever Announces ₹2,500 Crore Investment in New Food Processing Plant",
+      "source": "LiveMint",
+      "url": "https://www.livemint.com/companies/hul-food-processing-plant",
+      "published_date": "2026-03-06",
+      "summary": "Hindustan Unilever Limited (HUL) has announced an investment of ₹2,500 crore ($300 million) in a new state-of-the-art food processing facility in Maharashtra. The plant will produce packaged soups, noodles, and ready-to-eat meals, targeting India's rapidly growing convenience food market.",
+      "deal_type": "Investment",
+      "deal_value": "₹2,500 Cr ($300M)",
+      "buyer": "Hindustan Unilever",
+      "target": "Greenfield Plant (Maharashtra)",
+      "sector": "Packaged Foods",
+      "region": "India",
+      "relevance_score": 53,
+      "fmcg_keywords_matched": [
+        "food",
+        "packaged"
+      ],
+      "deal_keywords_matched": [
+        "investment",
+        "invest"
+      ],
+      "company_keywords_matched": [
+        "unilever",
+        "hindustan unilever"
+      ],
+      "credibility_score": 82,
+      "credibility_tier": "Tier 2 — Reputable",
+      "is_low_credibility": false,
+      "combined_score": 64.6
+    },
+    {
+      "title": "Nestle to buy Fireside Foods in $2.1 billion deal",
+      "source": "Bloomberg",
+      "url": "https://www.bloomberg.com/news/nestle-fireside-acquisition-2026",
+      "published_date": "2026-03-20",
+      "summary": "Nestlé SA agreed to acquire Fireside Foods Inc. for approximately $2.1 billion, expanding its presence in the premium snack market. The deal is expected to close by Q3 2026 pending regulatory approvals in the US and EU.",
+      "deal_type": "M&A",
+      "deal_value": "$2.1B",
+      "buyer": "Nestlé",
+      "target": "Fireside Foods",
+      "sector": "Packaged Snacks",
+      "region": "North America",
+      "relevance_score": 43,
+      "fmcg_keywords_matched": [
+        "food",
+        "snack"
+      ],
+      "deal_keywords_matched": [
+        "acquire",
+        "deal"
+      ],
+      "company_keywords_matched": [
+        "nestle"
+      ],
+      "credibility_score": 95,
+      "credibility_tier": "Tier 1 — Premier",
+      "is_low_credibility": false,
+      "combined_score": 63.8
+    },
+    {
+      "title": "Coca-Cola Acquires Minority Stake in African Juice Brand FreshPressAfrica",
+      "source": "Forbes",
+      "url": "https://www.forbes.com/coca-cola-freshpressafrica-investment",
+      "published_date": "2026-03-11",
+      "summary": "The Coca-Cola Company has acquired a 25% minority stake in FreshPressAfrica, a fast-growing juice and smoothie brand operating across Nigeria, Kenya, and South Africa. The investment size was not disclosed but is estimated at $50-70 million.",
+      "deal_type": "Investment",
+      "deal_value": "$50-70M (est.)",
+      "buyer": "Coca-Cola",
+      "target": "FreshPressAfrica",
+      "sector": "Beverages",
+      "region": "Africa",
+      "relevance_score": 48,
+      "fmcg_keywords_matched": [],
+      "deal_keywords_matched": [
+        "acquire",
+        "investment",
+        "invest",
+        "stake"
+      ],
+      "company_keywords_matched": [
+        "coca-cola"
+      ],
+      "credibility_score": 82,
+      "credibility_tier": "Tier 2 — Reputable",
+      "is_low_credibility": false,
+      "combined_score": 61.6
+    },
+    {
+      "title": "ITC Acquires Healthy Breakfast Brand MorningStar for ₹1,200 Crore",
+      "source": "MoneyControl",
+      "url": "https://www.moneycontrol.com/news/itc-morningstar-acquisition",
+      "published_date": "2026-03-15",
+      "summary": "ITC Limited has acquired MorningStar, a direct-to-consumer healthy breakfast and cereal brand, for ₹1,200 crore (approximately $140 million). The acquisition aligns with ITC's strategy to expand its packaged foods portfolio, particularly in the health and wellness segment.",
+      "deal_type": "M&A",
+      "deal_value": "₹1,200 Cr",
+      "buyer": "ITC",
+      "target": "MorningStar",
+      "sector": "Packaged Foods",
+      "region": "India",
+      "relevance_score": 47,
+      "fmcg_keywords_matched": [
+        "food",
+        "packaged"
+      ],
+      "deal_keywords_matched": [
+        "acquisition",
+        "acquire"
+      ],
+      "company_keywords_matched": [
+        "itc"
+      ],
+      "credibility_score": 82,
+      "credibility_tier": "Tier 2 — Reputable",
+      "is_low_credibility": false,
+      "combined_score": 61.0
+    },
+    {
+      "title": "Unilever Invests $450M in Indian Personal Care Startup GlowNaturals",
+      "source": "Economic Times",
+      "url": "https://economictimes.indiatimes.com/unilever-glownaturals-investment",
+      "published_date": "2026-03-18",
+      "summary": "Unilever's venture arm has invested $450 million for a 65% stake in GlowNaturals, a Bengaluru-based personal care startup specializing in ayurvedic skincare products. GlowNaturals has grown 180% year-over-year and currently operates in 12 countries across Asia-Pacific.",
+      "deal_type": "Investment",
+      "deal_value": "$450M",
+      "buyer": "Unilever",
+      "target": "GlowNaturals",
+      "sector": "Personal Care",
+      "region": "India",
+      "relevance_score": 38,
+      "fmcg_keywords_matched": [
+        "personal care"
+      ],
+      "deal_keywords_matched": [
+        "invest",
+        "stake"
+      ],
+      "company_keywords_matched": [
+        "unilever"
+      ],
+      "credibility_score": 95,
+      "credibility_tier": "Tier 1 — Premier",
+      "is_low_credibility": false,
+      "combined_score": 60.8
+    },
+    {
+      "title": "L'Oréal Acquires Japanese Skincare Brand HadaZen for $900 Million",
+      "source": "Bloomberg",
+      "url": "https://www.bloomberg.com/news/loreal-hadazen-acquisition",
+      "published_date": "2026-03-09",
+      "summary": "French cosmetics giant L'Oréal has acquired HadaZen, a premium Japanese skincare brand known for its minimalist, science-backed formulations. The $900 million deal marks L'Oréal's largest acquisition in the Asia-Pacific skincare segment.",
+      "deal_type": "M&A",
+      "deal_value": "$900M",
+      "buyer": "L'Oréal",
+      "target": "HadaZen",
+      "sector": "Cosmetics",
+      "region": "Asia-Pacific",
+      "relevance_score": 38,
+      "fmcg_keywords_matched": [
+        "cosmetics"
+      ],
+      "deal_keywords_matched": [
+        "acquisition",
+        "acquire",
+        "deal"
+      ],
+      "company_keywords_matched": [],
+      "credibility_score": 95,
+      "credibility_tier": "Tier 1 — Premier",
+      "is_low_credibility": false,
+      "combined_score": 60.8
+    },
+    {
+      "title": "Mondelez International Completes Acquisition of Brazilian Confectionery Group DoceBrasil",
+      "source": "Reuters",
+      "url": "https://www.reuters.com/business/mondelez-docebrasil-acquisition-2026",
+      "published_date": "2026-03-10",
+      "summary": "Mondelez International has completed its acquisition of DoceBrasil, one of Brazil's largest confectionery companies, for $1.4 billion. The deal gives Mondelez access to DoceBrasil's portfolio of popular chocolate and candy brands with strong distribution across Latin America.",
+      "deal_type": "M&A",
+      "deal_value": "$1.4B",
+      "buyer": "Mondelez",
+      "target": "DoceBrasil",
+      "sector": "Confectionery",
+      "region": "Latin America",
+      "relevance_score": 33,
+      "fmcg_keywords_matched": [
+        "confectionery"
+      ],
+      "deal_keywords_matched": [
+        "acquisition",
+        "deal"
+      ],
+      "company_keywords_matched": [
+        "mondelez"
+      ],
+      "credibility_score": 95,
+      "credibility_tier": "Tier 1 — Premier",
+      "is_low_credibility": false,
+      "combined_score": 57.8
+    },
+    {
+      "title": "Kraft Heinz to Acquire Mexican Condiments Brand SaborRico for $180M",
+      "source": "Reuters",
+      "url": "https://www.reuters.com/business/kraft-heinz-saborrico-acquisition",
+      "published_date": "2026-03-02",
+      "summary": "Kraft Heinz Company has announced the acquisition of SaborRico, a Mexican condiments and sauces maker, for $180 million. SaborRico is known for its authentic Mexican hot sauces and salsas distributed across North America and parts of Central America.",
+      "deal_type": "M&A",
+      "deal_value": "$180M",
+      "buyer": "Kraft Heinz",
+      "target": "SaborRico",
+      "sector": "Condiments & Sauces",
+      "region": "Latin America",
+      "relevance_score": 32,
+      "fmcg_keywords_matched": [],
+      "deal_keywords_matched": [
+        "acquisition",
+        "acquire"
+      ],
+      "company_keywords_matched": [
+        "kraft heinz"
+      ],
+      "credibility_score": 95,
+      "credibility_tier": "Tier 1 — Premier",
+      "is_low_credibility": false,
+      "combined_score": 57.2
+    },
+    {
+      "title": "Dabur India Invests ₹400 Crore in Organic Baby Care Brand TinyOrganics",
+      "source": "Economic Times",
+      "url": "https://economictimes.indiatimes.com/dabur-tinyorganics-investment",
+      "published_date": "2026-02-27",
+      "summary": "Dabur India has invested ₹400 crore ($48 million) for a 55% controlling stake in TinyOrganics, a premium organic baby care brand. This marks Dabur's entry into the organized baby care segment in India.",
+      "deal_type": "Investment",
+      "deal_value": "₹400 Cr ($48M)",
+      "buyer": "Dabur",
+      "target": "TinyOrganics",
+      "sector": "Baby Care",
+      "region": "India",
+      "relevance_score": 32,
+      "fmcg_keywords_matched": [
+        "baby care"
+      ],
+      "deal_keywords_matched": [
+        "invest",
+        "stake"
+      ],
+      "company_keywords_matched": [
+        "dabur"
+      ],
+      "credibility_score": 95,
+      "credibility_tier": "Tier 1 — Premier",
+      "is_low_credibility": false,
+      "combined_score": 57.2
+    },
+    {
+      "title": "Godrej Consumer Products to Acquire African Home Care Brand CleanAfrica",
+      "source": "Business Standard",
+      "url": "https://www.business-standard.com/godrej-cleanafrica-acquisition",
+      "published_date": "2026-03-14",
+      "summary": "Godrej Consumer Products Limited (GCPL) has entered into a definitive agreement to acquire CleanAfrica, a leading household cleaning brand in East Africa, for $85 million. This acquisition will expand GCPL's Africa business, which currently contributes 25% of its international revenue.",
+      "deal_type": "M&A",
+      "deal_value": "$85M",
+      "buyer": "Godrej Consumer Products",
+      "target": "CleanAfrica",
+      "sector": "Household Care",
+      "region": "Africa",
+      "relevance_score": 40,
+      "fmcg_keywords_matched": [
+        "household"
+      ],
+      "deal_keywords_matched": [
+        "acquisition",
+        "acquire"
+      ],
+      "company_keywords_matched": [
+        "godrej consumer"
+      ],
+      "credibility_score": 82,
+      "credibility_tier": "Tier 2 — Reputable",
+      "is_low_credibility": false,
+      "combined_score": 56.8
+    },
+    {
+      "title": "General Mills Acquires European Plant-Based Dairy Brand OatLux for $320 Million",
+      "source": "CNBC",
+      "url": "https://www.cnbc.com/general-mills-oatlux-acquisition",
+      "published_date": "2026-03-05",
+      "summary": "General Mills has completed the acquisition of OatLux, a European plant-based dairy alternatives brand, for $320 million. OatLux specializes in oat-based milk, yogurt, and cream products and has a strong presence in the UK, Germany, and Scandinavia.",
+      "deal_type": "M&A",
+      "deal_value": "$320M",
+      "buyer": "General Mills",
+      "target": "OatLux",
+      "sector": "Dairy Alternatives",
+      "region": "Europe",
+      "relevance_score": 39,
+      "fmcg_keywords_matched": [
+        "dairy"
+      ],
+      "deal_keywords_matched": [
+        "acquisition",
+        "acquire"
+      ],
+      "company_keywords_matched": [
+        "general mills"
+      ],
+      "credibility_score": 82,
+      "credibility_tier": "Tier 2 — Reputable",
+      "is_low_credibility": false,
+      "combined_score": 56.2
+    },
+    {
+      "title": "Ferrero Group Acquires UK Premium Chocolate Brand Thornton & Moore",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/business/ferrero-thornton-moore-acquisition",
+      "published_date": "2026-03-04",
+      "summary": "Italian confectionery giant Ferrero has acquired Thornton & Moore, a UK-based premium chocolate brand, for an undisclosed sum estimated at £180 million ($225 million). The acquisition extends Ferrero's premium chocolate portfolio in the British market.",
+      "deal_type": "M&A",
+      "deal_value": "£180M ($225M est.)",
+      "buyer": "Ferrero",
+      "target": "Thornton & Moore",
+      "sector": "Confectionery",
+      "region": "Europe",
+      "relevance_score": 39,
+      "fmcg_keywords_matched": [
+        "confectionery"
+      ],
+      "deal_keywords_matched": [
+        "acquisition",
+        "acquire"
+      ],
+      "company_keywords_matched": [
+        "ferrero"
+      ],
+      "credibility_score": 82,
+      "credibility_tier": "Tier 2 — Reputable",
+      "is_low_credibility": false,
+      "combined_score": 56.2
+    },
+    {
+      "title": "Pfizer Acquires Biotech Firm GeneCure for $8.5 Billion",
+      "source": "Reuters",
+      "url": "https://www.reuters.com/business/pfizer-genecure-acquisition",
+      "published_date": "2026-03-16",
+      "summary": "Pharmaceutical giant Pfizer has completed the acquisition of GeneCure Therapeutics for $8.5 billion, strengthening its gene therapy pipeline. The deal includes GeneCure's Phase 3 clinical trial candidates for rare genetic disorders.",
+      "deal_type": "M&A",
+      "deal_value": "$8.5B",
+      "buyer": "Pfizer",
+      "target": "GeneCure Therapeutics",
+      "sector": "Pharmaceuticals",
+      "region": "North America",
+      "relevance_score": 30,
+      "fmcg_keywords_matched": [],
+      "deal_keywords_matched": [
+        "acquisition",
+        "acquire",
+        "deal"
+      ],
+      "company_keywords_matched": [],
+      "credibility_score": 95,
+      "credibility_tier": "Tier 1 — Premier",
+      "is_low_credibility": false,
+      "combined_score": 56.0
+    },
+    {
+      "title": "Major FMCG deals surge in Q1 2026!! Check out the hottest acquisitions NOW!!!",
+      "source": "DealBuzz Blog",
+      "url": "https://www.dealbuzzblog.com/fmcg-deals-q1-2026",
+      "published_date": "2026-03-22",
+      "summary": "The FMCG sector is on fire! Multiple consumer goods companies are making billion-dollar bets. From Nestlé's Fireside acquisition to Unilever's Indian expansion, the deal activity is unprecedented. Click to read our exclusive analysis of every major deal.",
+      "deal_type": "Unknown",
+      "deal_value": "",
+      "buyer": "",
+      "target": "",
+      "sector": "FMCG",
+      "region": "Global",
+      "relevance_score": 65,
+      "fmcg_keywords_matched": [
+        "fmcg",
+        "consumer goods"
+      ],
+      "deal_keywords_matched": [
+        "acquisition",
+        "deal"
+      ],
+      "company_keywords_matched": [
+        "nestle",
+        "unilever"
+      ],
+      "credibility_score": 40,
+      "credibility_tier": "Unknown",
+      "is_low_credibility": true,
+      "combined_score": 55.0
+    },
+    {
+      "title": "Church & Dwight Acquires European Laundry Pod Brand FreshPods",
+      "source": "MarketWatch",
+      "url": "https://www.marketwatch.com/church-dwight-freshpods",
+      "published_date": "2026-02-28",
+      "summary": "Church & Dwight Co. has agreed to acquire FreshPods, a European laundry detergent pod brand, for $120 million. The deal bolsters Church & Dwight's household products portfolio in Europe.",
+      "deal_type": "M&A",
+      "deal_value": "$120M",
+      "buyer": "Church & Dwight",
+      "target": "FreshPods",
+      "sector": "Household Care",
+      "region": "Europe",
+      "relevance_score": 41,
+      "fmcg_keywords_matched": [
+        "household",
+        "detergent"
+      ],
+      "deal_keywords_matched": [
+        "acquire",
+        "deal"
+      ],
+      "company_keywords_matched": [
+        "church & dwight"
+      ],
+      "credibility_score": 65,
+      "credibility_tier": "Tier 3 — Niche/Regional",
+      "is_low_credibility": false,
+      "combined_score": 50.6
+    },
+    {
+      "title": "Beiersdorf Invests €200M in Sustainable Packaging Innovation Center",
+      "source": "Cosmetics Business",
+      "url": "https://www.cosmeticsbusiness.com/beiersdorf-packaging-investment",
+      "published_date": "2026-02-28",
+      "summary": "German personal care company Beiersdorf, maker of Nivea, has announced a €200 million ($215 million) investment in a new sustainable packaging innovation center in Hamburg. The center will focus on developing recyclable and biodegradable packaging for consumer products.",
+      "deal_type": "Investment",
+      "deal_value": "€200M ($215M)",
+      "buyer": "Beiersdorf",
+      "target": "Greenfield R&D Center",
+      "sector": "Personal Care",
+      "region": "Europe",
+      "relevance_score": 36,
+      "fmcg_keywords_matched": [
+        "personal care"
+      ],
+      "deal_keywords_matched": [
+        "investment",
+        "invest"
+      ],
+      "company_keywords_matched": [
+        "beiersdorf"
+      ],
+      "credibility_score": 65,
+      "credibility_tier": "Tier 3 — Niche/Regional",
+      "is_low_credibility": false,
+      "combined_score": 47.6
+    },
+    {
+      "title": "Nestle Fireside acquisition news update",
+      "source": "DealBuzz Blog",
+      "url": "https://www.dealbuzzblog.com/nestle-fireside-update",
+      "published_date": "2026-03-21",
+      "summary": "More details emerge on the Nestlé acquisition of Fireside Foods. Sources say the deal includes Fireside's manufacturing facilities in Oregon and Colorado. The $2.1 billion price tag represents a 12x revenue multiple.",
+      "deal_type": "M&A",
+      "deal_value": "$2.1B",
+      "buyer": "Nestlé",
+      "target": "Fireside Foods",
+      "sector": "Packaged Snacks",
+      "region": "North America",
+      "relevance_score": 46,
+      "fmcg_keywords_matched": [
+        "food"
+      ],
+      "deal_keywords_matched": [
+        "acquisition",
+        "merge",
+        "deal"
+      ],
+      "company_keywords_matched": [
+        "nestle"
+      ],
+      "credibility_score": 40,
+      "credibility_tier": "Unknown",
+      "is_low_credibility": true,
+      "combined_score": 43.6
+    }
+  ],
+  "top_deals": [
+    {
+      "title": "Marico Picks Up 40% Stake in Vietnamese Coconut Oil Brand CocoViet",
+      "source": "Economic Times",
+      "url": "https://economictimes.indiatimes.com/marico-cocoviet-investment",
+      "published_date": "2026-03-13",
+      "summary": "Indian FMCG company Marico has acquired a 40% stake in CocoViet, a Vietnamese coconut oil and personal care brand, for $35 million. The strategic investment marks Marico's entry into Vietnam's fast-growing personal care market.",
+      "deal_type": "Investment",
+      "deal_value": "$35M",
+      "buyer": "Marico",
+      "target": "CocoViet",
+      "sector": "Personal Care",
+      "region": "Southeast Asia",
+      "relevance_score": 73,
+      "fmcg_keywords_matched": [
+        "fmcg",
+        "personal care"
+      ],
+      "deal_keywords_matched": [
+        "acquire",
+        "investment",
+        "invest",
+        "stake"
+      ],
+      "company_keywords_matched": [
+        "marico"
+      ],
+      "credibility_score": 95,
+      "credibility_tier": "Tier 1 — Premier",
+      "is_low_credibility": false,
+      "combined_score": 81.8
+    },
+    {
+      "title": "P&G and Dabur Announce Joint Venture for Oral Care Products in Southeast Asia",
+      "source": "CNBC",
+      "url": "https://www.cnbc.com/pg-dabur-joint-venture-oral-care",
+      "published_date": "2026-03-17",
+      "summary": "Procter & Gamble and Indian FMCG major Dabur have announced a joint venture to develop and market oral care products across Southeast Asia. The JV will combine P&G's distribution network with Dabur's herbal formulations expertise. Initial investment is pegged at $200 million.",
+      "deal_type": "JV",
+      "deal_value": "$200M",
+      "buyer": "Procter & Gamble / Dabur",
+      "target": "Joint Venture Entity",
+      "sector": "Oral Care",
+      "region": "Southeast Asia",
+      "relevance_score": 78,
+      "fmcg_keywords_matched": [
+        "fmcg",
+        "oral care"
+      ],
+      "deal_keywords_matched": [
+        "investment",
+        "invest",
+        "joint venture"
+      ],
+      "company_keywords_matched": [
+        "procter & gamble",
+        "p&g",
+        "dabur"
+      ],
+      "credibility_score": 82,
+      "credibility_tier": "Tier 2 — Reputable",
+      "is_low_credibility": false,
+      "combined_score": 79.6
+    },
+    {
+      "title": "Unilever takes majority stake in Indian beauty brand GlowNaturals",
+      "source": "LiveMint",
+      "url": "https://www.livemint.com/companies/unilever-glownaturals-stake",
+      "published_date": "2026-03-18",
+      "summary": "Anglo-Dutch consumer goods major Unilever has acquired a 65% stake in Indian personal care startup GlowNaturals for $450 million. The investment is part of Unilever's strategy to expand its presence in the fast-growing ayurvedic beauty segment in India.",
+      "deal_type": "Investment",
+      "deal_value": "$450M",
+      "buyer": "Unilever",
+      "target": "GlowNaturals",
+      "sector": "Personal Care",
+      "region": "India",
+      "relevance_score": 72,
+      "fmcg_keywords_matched": [
+        "consumer goods",
+        "personal care"
+      ],
+      "deal_keywords_matched": [
+        "acquire",
+        "investment",
+        "invest",
+        "stake"
+      ],
+      "company_keywords_matched": [
+        "unilever"
+      ],
+      "credibility_score": 82,
+      "credibility_tier": "Tier 2 — Reputable",
+      "is_low_credibility": false,
+      "combined_score": 76.0
+    },
+    {
+      "title": "Nestlé Acquires High-End Snack Brand Fireside Foods for $2.1 Billion",
+      "source": "Reuters",
+      "url": "https://www.reuters.com/business/nestle-acquires-fireside-foods-2026",
+      "published_date": "2026-03-20",
+      "summary": "Swiss food giant Nestlé has completed the acquisition of US-based premium snack brand Fireside Foods in a deal valued at $2.1 billion. The acquisition strengthens Nestlé's position in the growing health-conscious snacking segment. Fireside Foods, known for its plant-based protein bars and organic trail mixes, recorded revenues of $680 million in 2025.",
+      "deal_type": "M&A",
+      "deal_value": "$2.1B",
+      "buyer": "Nestlé",
+      "target": "Fireside Foods",
+      "sector": "Packaged Snacks",
+      "region": "North America",
+      "relevance_score": 55,
+      "fmcg_keywords_matched": [
+        "food",
+        "snack"
+      ],
+      "deal_keywords_matched": [
+        "acquisition",
+        "acquire",
+        "deal"
+      ],
+      "company_keywords_matched": [
+        "nestle"
+      ],
+      "credibility_score": 95,
+      "credibility_tier": "Tier 1 — Premier",
+      "is_low_credibility": false,
+      "combined_score": 71.0
+    },
+    {
+      "title": "PepsiCo and Britannia Industries Form Joint Venture for Healthy Snacks in India",
+      "source": "Economic Times",
+      "url": "https://economictimes.indiatimes.com/pepsico-britannia-jv",
+      "published_date": "2026-03-08",
+      "summary": "PepsiCo Inc and Britannia Industries have announced a 50:50 joint venture to develop and distribute healthy snack products across India. The JV, with an initial investment of ₹800 crore ($95 million), will leverage PepsiCo's R&D capabilities and Britannia's extensive Indian distribution network.",
+      "deal_type": "JV",
+      "deal_value": "₹800 Cr ($95M)",
+      "buyer": "PepsiCo / Britannia Industries",
+      "target": "Joint Venture Entity",
+      "sector": "Packaged Snacks",
+      "region": "India",
+      "relevance_score": 51,
+      "fmcg_keywords_matched": [
+        "snack"
+      ],
+      "deal_keywords_matched": [
+        "investment",
+        "invest",
+        "joint venture"
+      ],
+      "company_keywords_matched": [
+        "britannia",
+        "pepsico"
+      ],
+      "credibility_score": 95,
+      "credibility_tier": "Tier 1 — Premier",
+      "is_low_credibility": false,
+      "combined_score": 68.6
+    }
+  ]
+}
