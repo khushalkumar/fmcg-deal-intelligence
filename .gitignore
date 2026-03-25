@@ -13,6 +13,7 @@ build/
 
 # Output (generated at runtime)
 output/
+deals.db
 
 # IDE
 .vscode/

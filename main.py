@@ -30,6 +30,7 @@ from pipeline.dedup import deduplicate
 from pipeline.relevance import score_relevance
 from pipeline.credibility import score_credibility, get_source_scores
 from pipeline.newsletter import generate_newsletter
+from pipeline.database import DealDatabase
 from pipeline.models import PipelineStats
 
 
@@ -162,6 +163,22 @@ def run_pipeline(source: str, config: dict, output_dir: str) -> None:
 
     # ── Final Summary ────────────────────────────────────────
     print(stats.summary())
+
+    # ── Stage 6: DATABASE PERSISTENCE ────────────────────────
+    print("┌─ Stage 6: DATABASE PERSISTENCE ──────────────────────────")
+    try:
+        with DealDatabase() as db:
+            new_count = db.save_deals(scored_deals)
+            total_historical = db.get_deal_count()
+            total_runs = db.get_run_count()
+            print(f"│  ✓ New deals saved:           {new_count}")
+            print(f"│  ✓ Already in DB (skipped):   {len(scored_deals) - new_count}")
+            print(f"│  ✓ Total historical deals:    {total_historical}")
+            print(f"│  ✓ Total pipeline runs:       {total_runs}")
+    except Exception as e:
+        logger.warning(f"Database persistence failed (non-fatal): {e}")
+        print(f"│  ⚠ Database error (non-fatal): {e}")
+    print("└──────────────────────────────────────────────────────────\n")
 
     # Print top 3 deals
     print("  TOP 3 DEALS BY COMBINED SCORE:")
