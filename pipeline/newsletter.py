@@ -63,7 +63,8 @@ def generate_newsletter(
         shutil.copy(os.path.join(output_dir, "newsletter.docx"), os.path.join(dash_dir, "newsletter.docx"))
         shutil.copy(os.path.join(output_dir, "newsletter.xlsx"), os.path.join(dash_dir, "newsletter.xlsx"))
         shutil.copy(os.path.join(output_dir, "newsletter.html"), os.path.join(dash_dir, "newsletter.html"))
-        logger.info("Copied newsletter files to dashboard/ for live downloading.")
+        shutil.copy(os.path.join(output_dir, "newsletter_data.json"), os.path.join(dash_dir, "newsletter_data.json"))
+        logger.info("Copied newsletter files to docs/ for live deployment.")
     except Exception as e:
         logger.error(f"Failed to copy files to dashboard folder: {e}")
 
