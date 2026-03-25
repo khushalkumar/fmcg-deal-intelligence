@@ -58,7 +58,7 @@ def generate_newsletter(
     # Copy generated files to dashboard folder for direct download on live site
     try:
         import shutil
-        dash_dir = os.path.join(os.path.dirname(output_dir), "dashboard")
+        dash_dir = os.path.join(os.path.dirname(output_dir), "docs")
         os.makedirs(dash_dir, exist_ok=True)
         shutil.copy(os.path.join(output_dir, "newsletter.docx"), os.path.join(dash_dir, "newsletter.docx"))
         shutil.copy(os.path.join(output_dir, "newsletter.xlsx"), os.path.join(dash_dir, "newsletter.xlsx"))
