@@ -20,8 +20,8 @@ flowchart TD
     end
 
     %% The Server
-    subgraph Docker Container (Always-on Server)
-        Cron((Bi-Monthly<br>Python<br>Scheduler)) -.-> |Triggers every<br>15 Days| Pipeline
+    subgraph GitHub Actions (Bi-Monthly Cron)
+        Cron((Cloud<br>Scheduler)) -.-> |Triggers every<br>15 Days| Pipeline
 
         subgraph Pipeline [Python Data Pipeline]
             %% Ingestion & Fast Filters
@@ -62,10 +62,10 @@ flowchart TD
     end
 
     %% Web Deployment
-    subgraph Web Deployment (Static Hosting)
-        Netlify[Netlify / GitHub Pages]
-        HTML --> |Rendered View| Netlify
-        JSON --> |Powers Dashboard| Netlify
+    subgraph Web Deployment (GitHub Pages)
+        GHPages[GitHub Pages]
+        HTML --> |Rendered View| GHPages
+        JSON --> |Powers Dashboard| GHPages
     end
 
     %% Connection
@@ -86,6 +86,6 @@ funnel
 ```
 
 ## Presentation Talking Points:
-1. **The Process Manager:** Highlight that Docker acts as a self-healing process manager for the `scheduler.py` daemon, keeping the bi-monthly runs autonomous and insulated from host-OS crashes.
+1. **Serverless Architecture:** Highlight that GitHub Actions replaces the need for an always-on server. The pipeline only consumes compute for ~60 seconds every 15 days. For enterprise scale, this can be migrated to GCP Cloud Run Jobs (Dockerfile included in repo).
 2. **The Funnel Methodology (Cost Savings):** By performing Temporal (Date) filtering for free in Python *before* passing articles to the API, and deduplicating using ultra-cheap Vector Embeddings ($0.02 / 1M tokens) *before* the expensive Generative LLM layer, the total monthly cost to run the pipeline is practically zero ($0.01).
 3. **Lexical vs Semantic Deduplication:** Emphasize the pivot from Python's standard `difflib` (character matching) to OpenAI Vector Embeddings (meaning matching), demonstrating your ability to solve edge cases where journalists rewrite headlines completely differently for the exact same M&A event.

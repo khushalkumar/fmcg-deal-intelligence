@@ -22,13 +22,13 @@
   ┌─────────────────┐     ┌──────────────────┐     ┌─────────────────┐     ┌──────────────────┐     ┌──────────────────────┐
   │    INGEST        │────▶│    DE-DUPE        │────▶│   RELEVANCE     │────▶│   CREDIBILITY    │────▶│     NEWSLETTER       │
   │                  │     │                  │     │   SCORING       │     │   SCORING        │     │     GENERATION       │
-  │ • RSS feeds      │     │ • Exact hash     │     │ • FMCG keywords │     │ • Tiered source  │     │ • DOCX (Word)        │
-  │ • Sample JSON    │     │ • Fuzzy match    │     │ • Deal keywords │     │   dictionary     │     │ • XLSX (Excel)       │
-  │ • CSV fallback   │     │   (≥80% sim)     │     │ • Company names │     │ • Fuzzy source   │     │ • JSON (Dashboard)   │
-  │                  │     │ • Union-Find     │     │ • Score 0–100   │     │   matching       │     │ • CSV (cleaned data) │
+  │ • RSS feeds      │     │ • Exact hash     │     │ • GPT-5.4 LLM   │     │ • Tiered source  │     │ • DOCX (Word)        │
+  │ • Sample JSON    │     │ • OpenAI Vector  │     │ • Entity extract │     │   dictionary     │     │ • XLSX (Excel)       │
+  │ • 15-day filter  │     │   Embeddings     │     │ • JSON schema   │     │ • Fuzzy source   │     │ • HTML (Newsletter)  │
+  │                  │     │ • Cosine Sim     │     │ • Score 0–100   │     │   matching       │     │ • JSON (Dashboard)   │
   └─────────────────┘     └──────────────────┘     └─────────────────┘     └──────────────────┘     └──────────────────────┘
-       34 articles    ──▶     33 unique       ──▶     24 relevant      ──▶     24 scored        ──▶    Final newsletter
-                             (-1 exact dupe)         (-9 irrelevant)          (2 low-cred flagged)
+       ~12 articles    ──▶     ~10 unique       ──▶     ~3 relevant      ──▶     3 scored          ──▶    Final newsletter
+                              (semantic dedup)         (AI filtered)           (low-cred flagged)
 ```
 
 ---
@@ -76,11 +76,18 @@ Options:
 ## Project Structure
 
 ```
-Benori/
+fmcg-deal-intelligence/
 ├── main.py                    # CLI entry point — pipeline orchestrator
-├── config.yaml                # All tunable parameters
+├── config.yaml                # All tunable parameters (feeds, LLM model, thresholds)
+├── scheduler.py               # Bi-monthly Python daemon (for Docker deployment)
+├── Dockerfile                 # Production container (Cloud Run / Docker)
+├── .dockerignore
 ├── requirements.txt           # Python dependencies
 ├── .gitignore
+├── .env.example               # Template for environment variables
+│
+├── .github/workflows/
+│   └── pipeline.yml           # GitHub Actions bi-monthly cron job
 │
 ├── data/
 │   └── sample_deals.json      # Simulated dataset (34 entries)
@@ -88,31 +95,32 @@ Benori/
 ├── pipeline/
 │   ├── __init__.py
 │   ├── models.py              # Dataclasses: RawDeal, ScoredDeal, PipelineStats
-│   ├── ingest.py              # RSS feed scraping + JSON/CSV loading
-│   ├── dedup.py               # Exact + fuzzy de-duplication
-│   ├── relevance.py           # FMCG relevance scoring (keyword-based)
+│   ├── ingest.py              # RSS feed scraping + JSON loading + 15-day freshness filter
+│   ├── dedup.py               # Exact hash + OpenAI semantic vector deduplication
+│   ├── relevance.py           # GPT-5.4 LLM relevance scoring + entity extraction
 │   ├── credibility.py         # Source credibility scoring (tiered dictionary)
-│   └── newsletter.py          # DOCX, Excel, JSON generation
+│   └── newsletter.py          # DOCX, Excel, HTML, JSON generation
 │
 ├── tests/
 │   ├── test_dedup.py          # 9 tests — exact/fuzzy dedup, edge cases
-│   ├── test_relevance.py      # 5 tests — FMCG vs non-FMCG filtering
+│   ├── test_relevance.py      # 5 tests — LLM scoring with mocked OpenAI client
 │   └── test_credibility.py    # 8 tests — tier scoring, fuzzy matching
 │
-├── dashboard/                 # Web dashboard (HTML/CSS/JS)
-│   ├── index.html
+├── docs/                      # GitHub Pages static dashboard
+│   ├── index.html             # Live dashboard (reads newsletter_data.json)
 │   ├── style.css
-│   └── app.js
+│   ├── app.js
+│   ├── newsletter.html        # Styled HTML newsletter
+│   ├── newsletter_data.json   # JSON powering the dashboard
+│   ├── newsletter.docx        # Downloadable Word report
+│   └── newsletter.xlsx        # Downloadable Excel workbook
 │
-├── output/                    # Generated at runtime
-│   ├── raw_deals.csv / .json  # Raw ingested data
-│   ├── cleaned_deals.csv      # After dedup + scoring
-│   ├── newsletter.docx        # Professional newsletter
-│   ├── newsletter.xlsx        # Excel workbook with scores
-│   └── newsletter_data.json   # JSON for web dashboard
+├── output/                    # Generated at runtime (gitignored)
 │
 ├── README.md                  # This file
-└── DESIGN_DECISIONS.md        # All design decisions with alternatives
+├── DESIGN_DECISIONS.md        # 9 design decisions with alternatives analyzed
+├── ARCHITECTURE.md            # Mermaid.js system architecture diagrams
+└── DEPLOYMENT.md              # Step-by-step GCP Cloud Run deployment guide
 ```
 
 ---
@@ -121,19 +129,21 @@ Benori/
 
 ### 1. Ingestion
 - **Live mode**: Scrapes Google News RSS feeds with FMCG deal queries. No API keys needed.
+- **Freshness filter**: Drops articles older than 15 days (syncs with bi-monthly cron schedule).
 - **Sample mode**: Loads from `data/sample_deals.json` (34 realistic simulated entries).
 - Falls back to sample data if RSS scraping fails.
 
 ### 2. De-Duplication
 - **Exact removal**: MD5 hash on `(normalized_title, source, date)` — catches scraped duplicates.
-- **Fuzzy detection**: `difflib.SequenceMatcher` on `title + summary` with ≥80% threshold. Groups near-dupes using Union-Find and keeps the highest-credibility source.
+- **Semantic detection**: OpenAI `text-embedding-3-small` vector embeddings + Cosine Similarity (threshold ≥ 0.80). Catches paraphrased headlines about the same deal event.
+- Groups near-dupes using Union-Find and keeps the highest-credibility source.
 - Unicode normalization handles accented characters (Nestlé ↔ Nestle).
 
 ### 3. Relevance Scoring
-- Three weighted keyword categories: FMCG sector terms, deal-type terms, and known FMCG company names.
-- Score = sum of matched keyword weights, capped at 100.
-- Articles below the threshold (default: 30) are filtered out.
-- Effectively removes non-FMCG noise (tech, pharma, logistics articles).
+- Uses **GPT-5.4** to semantically analyze each article and determine if it describes a real FMCG deal.
+- Extracts structured entities: **Buyer**, **Target**, **Deal Value**, **Deal Type** (M&A, Investment, JV, Divestiture).
+- Returns a confidence score (0–100). Articles below threshold are filtered out.
+- Effectively removes non-FMCG noise (tech, pharma, general market outlooks).
 
 ### 4. Credibility Scoring
 - Tiered source dictionary (Tier 1: Reuters/Bloomberg = 95, Tier 2: CNBC/Forbes = 82, Tier 3: trade pubs = 65, Unknown = 40).
@@ -142,9 +152,10 @@ Benori/
 - Low-credibility articles (score < 50) are flagged but included with a warning.
 
 ### 5. Newsletter Generation
-- **DOCX**: Executive summary, Top Deals table, deal-by-deal sections grouped by type (M&A, Investment, JV, Divestiture).
+- **DOCX**: Executive summary, Top Deals table, deal-by-deal sections grouped by type.
 - **Excel**: Full dataset with conditional formatting. Sortable/filterable.
-- **JSON**: Structured data for the web dashboard.
+- **HTML**: Styled newsletter viewable in any browser.
+- **JSON**: Structured data powering the live web dashboard.
 
 ---
 
@@ -152,9 +163,9 @@ Benori/
 
 All parameters are editable in `config.yaml`:
 - RSS feed URLs and timeout
-- Similarity threshold for fuzzy dedup
-- Relevance keywords and weights
-- FMCG company list
+- Freshness filter (`max_age_days: 15`)
+- Semantic similarity threshold for dedup
+- LLM model and system prompt
 - Source credibility tiers
 - Newsletter title and formatting
 
@@ -192,10 +203,23 @@ All dependencies are lightweight — no heavy ML frameworks needed.
 
 ---
 
-## Production Architecture (Future Enhancements)
+## Deployment
 
-If this pipeline were deployed for internal business users, the following architectural upgrades would be implemented:
+The pipeline supports multiple deployment strategies:
 
-1. **Automated Scheduling (Cron / Airflow)**: The `main.py` pipeline would run automatically (e.g., every 12 hours) using a scheduled CRON job to continuously pull the latest intelligence.
-2. **Persistent Database (SQLite / PostgreSQL)**: Ingestion data would be saved iteratively to a relational database rather than overwriting a local CSV. This allows for historical deal search on the dashboard and strictly prevents the pipeline from re-processing duplicate articles across different cron runs.
-3. **Time-Bound Filtration**: To optimize OpenAI API costs, an ingestion filter would drop any RSS articles possessing a `published_date` older than a defined trailing window (e.g., `max_age_days: 14`) prior to LLM evaluation.
+| Strategy | How | Cost |
+|---|---|---|
+| **GitHub Actions** (current) | Bi-monthly cron in `.github/workflows/pipeline.yml` → auto-commits to repo → GitHub Pages redeploys | $0 |
+| **Cloud Run + Scheduler** | Dockerfile → GCP Artifact Registry → Cloud Run Job triggered by Cloud Scheduler | ~$0 (free tier) |
+| **Docker on VPS** | `docker run -d --restart always` on any Linux server | ~$5/mo |
+
+See [DEPLOYMENT.md](DEPLOYMENT.md) for the full GCP Cloud Run step-by-step guide.
+
+---
+
+## Future Enhancements
+
+1. **Database Persistence (SQLite/PostgreSQL)**: Store all historical deals to enable trend analysis and prevent re-processing across runs.
+2. **Email Distribution**: Auto-send the HTML newsletter to subscribers via SendGrid/SES after each pipeline run.
+3. **Advanced Dashboard Filters**: Add search by deal value range, sector sub-category, and date range.
+4. **Time-Decay Scoring**: Apply a mathematical decay multiplier to penalize older deals in the final ranking.

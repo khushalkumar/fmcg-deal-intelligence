@@ -19,8 +19,8 @@
     │  ┌──────────┐   ┌──────────┐   ┌───────────┐   ┌────────────┐   ┌──────┐ │
     │  │ INGEST   │──▶│ DE-DUPE  │──▶│ RELEVANCE │──▶│CREDIBILITY │──▶│NEWS- │ │
     │  │          │   │          │   │  SCORING  │   │  SCORING   │   │LETTER│ │
-    │  │ RSS/JSON │   │ Hash +   │   │ Keyword   │   │ Tiered     │   │ DOCX │ │
-    │  │          │   │ difflib  │   │ matching  │   │ dictionary │   │ XLSX │ │
+    │  │ RSS/JSON │   │ Hash +   │   │ GPT-5.4   │   │ Tiered     │   │ DOCX │ │
+    │  │          │   │ Vectors  │   │ LLM       │   │ dictionary │   │ XLSX │ │
     │  └──────────┘   └──────────┘   └───────────┘   └────────────┘   │ JSON │ │
     │       │                                                         └──────┘ │
     │       ▼                                                            │      │
@@ -56,15 +56,17 @@ We immediately pivoted to generating a single batch of OpenAI `text-embedding-3-
 
 ## Decision 2: Relevance Scoring
 
-**Chosen:** Weighted keyword matching
+**Chosen:** GPT-5.4 LLM Classification + Structured Entity Extraction
+*(Upgraded from: Weighted keyword matching)*
 
 | Approach | Pros | Cons |
 |---|---|---|
-| **Keyword Matching** ✅ | No training data needed. Fully transparent and auditable — score breakdown shows exactly why each article passed/failed. Easy to modify (edit config.yaml). Cost: zero. | No contextual understanding. "Apple" (fruit) vs "Apple" (company) ambiguity. Requires manual keyword curation. May miss novel FMCG terms. |
-| **ML Classifier** (SVM, RandomForest) | Captures non-obvious patterns. High accuracy when trained on sufficient labeled data. Handles feature interactions. | Requires ~500+ labeled examples for training. Feature engineering needed. Black-box: hard to explain why an article scored 78 vs 82. Domain-specific: needs retraining for different sectors. |
-| **LLM Classification** (GPT, Claude) | Deep contextual understanding. Zero-shot: no training data. Can handle nuanced queries like "is this a strategic acquisition in the FMCG space?" | API costs ($0.01-0.10 per article). Latency (1-5 seconds/article vs milliseconds). Hallucination risk — may confidently misclassify. Not deterministic. Requires internet access. |
+| **LLM Classification (GPT-5.4)** ✅ | Deep contextual understanding. Zero-shot: no training data. Extracts structured entities (Buyer, Target, Deal Value) in a single API call. Handles nuanced queries like "is this a strategic acquisition in the FMCG space?" | API costs (~$0.0001 per article). Latency (1-2 seconds/article). Requires internet access. |
+| **Keyword Matching** | No training data needed. Fully transparent and auditable. Cost: zero. | No contextual understanding. "Apple" (fruit) vs "Apple" (company) ambiguity. Cannot extract structured entities. Requires manual keyword curation. |
+| **ML Classifier** (SVM, RandomForest) | Captures non-obvious patterns. | Requires ~500+ labeled examples. Black-box. Domain-specific: needs retraining. |
 
-**Rationale:** FMCG is a well-defined sector with a finite vocabulary (food, beverage, personal care, household goods). The keywords are predictable and enumerable. This makes keyword matching sufficient *and* superior to ML/LLM for this specific use case because: (1) it's deterministic, (2) it's explainable to a non-technical business user, (3) it has zero latency and zero cost, and (4) it can be maintained by anyone editing a YAML file, not just an ML engineer.
+**Rationale / The Journey:**
+We initially implemented weighted keyword matching, which was transparent and zero-cost. However, keyword matching fundamentally cannot extract structured entities (Buyer, Target, Deal Value) from headlines — it can only classify. By upgrading to GPT-5.4, we gain both classification AND entity extraction in a single API call, while the cost per article remains negligible (~$0.0001). The LLM also eliminates false positives that keyword matching missed, such as general market outlook articles that mention FMCG terms without describing an actual deal.
 
 ---
 

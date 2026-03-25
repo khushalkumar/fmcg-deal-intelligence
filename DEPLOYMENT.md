@@ -29,17 +29,8 @@ Cloud Scheduler (every 15 days)
 
 1. Go to **[github.com/khushalkumar/fmcg-deal-intelligence/settings/pages](https://github.com/khushalkumar/fmcg-deal-intelligence/settings/pages)**
 2. Under **Source**, select **"Deploy from a branch"**
-3. Set branch to **`main`** and folder to **`/dashboard`** *(Note: GitHub Pages only supports root `/` or `/docs`. If `/dashboard` is not available, see Step 1b below.)*
-
-### Step 1b: If GitHub Pages doesn't support `/dashboard` directly
-
-Rename your `dashboard/` folder to `docs/`:
-```bash
-git mv dashboard docs
-git commit -m "rename dashboard to docs for GitHub Pages"
-git push
-```
-Then select **`/docs`** in GitHub Pages settings.
+3. Set branch to **`main`** and folder to **`/docs`**
+4. Click Save
 
 Your dashboard will be live at: `https://khushalkumar.github.io/fmcg-deal-intelligence`
 

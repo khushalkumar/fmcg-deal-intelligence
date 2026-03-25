@@ -3,14 +3,13 @@ De-duplication Module
 
 Two-layer de-duplication strategy:
     1. Exact duplicate removal  — Hash-based on (normalized_title, source, date)
-    2. Near-duplicate detection — difflib.SequenceMatcher on title+summary text
+    2. Near-duplicate detection — OpenAI text-embedding-3-small vector embeddings
+       + Cosine Similarity for semantic matching
 
-Design Decision: We use difflib.SequenceMatcher (Python stdlib) instead of TF-IDF,
-MinHash/LSH, or sentence embeddings because:
-    - Zero external dependencies
-    - Sufficient for datasets of 50-200 articles (O(n²) is acceptable)
-    - Fully transparent and explainable logic
-    - No model downloads or GPU requirements
+Design Decision: We upgraded from difflib.SequenceMatcher to OpenAI embeddings
+after observing edge-case failures where lexically different headlines described
+the same deal event (e.g., the "Danone Huel" case). Vector embeddings understand
+semantic meaning rather than character sequences, fixing these duplicates.
 
 When near-duplicates are found, we keep the article from the highest-credibility
 source (determined by credibility_score passed in or source tier lookup).
