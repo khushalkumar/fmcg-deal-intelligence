@@ -141,16 +141,28 @@ We immediately pivoted to generating a single batch of OpenAI `text-embedding-3-
 
 ## Decision 8: Scheduling and Deployment
 
-**Chosen:** Native Python Daemon (`scheduler.py`) wrapped in a Docker Container
+**Chosen:** Google Cloud Run Job + Cloud Scheduler (Serverless)
+*(Evolved from: Python Daemon + Docker → Cloud Run Serverless)*
 
 | Approach | Pros | Cons |
 |---|---|---|
-| **Python Daemon + Docker** ✅ | 100% Portable (runs exactly the same on AWS, DigitalOcean, or a local Mac). Docker acts as the Process Manager (`restart: always`), automatically reviving the scheduler if the server loses power or crashes. | Small learning curve for developers unfamiliar with Docker. |
-| **Linux crontab (OS level)** | Zero code required. Built into every Linux machine. | Tightly coupled to the host OS. Hard to version control (crontabs live outside the git repo). If the server moves, you have to manually recreate the job. |
-| **nohup `scheduler.py` &** | Quickest way to run a daemon in the background. | Not production-proof. If the server reboots or kills the process due to Memory constraints, the script dies forever. |
-| **Apache Airflow / Prefect**| Industry standard for massive enterprise data pipelines. Visual DAG monitoring. | Massive overkill for a lightweight, single-script application. Requires databases and web servers just to schedule tasks. |
+| **Cloud Run Job + Cloud Scheduler** ✅ | True serverless — container boots for ~60s, runs pipeline, shuts down. Zero idle compute. Fully managed by Google (no OS patching, no SSH, no Docker daemon management). Free tier covers 360K GB-seconds/month. | Requires GCP account. Slight cold-start latency (acceptable for a batch job). |
+| **GCE VM + Docker Daemon** | Full control over the environment. Always-on server. | Wastes resources 99.9% of the time (alive 24/7 for a job that runs 60s every 15 days). Requires OS maintenance, SSH access, Docker updates. |
+| **GitHub Actions Cron** | $0, zero infrastructure. | Limited to 6-hour max job runtime. Secrets management less secure than GCP. Not a "real" cloud deployment. |
+| **Apache Airflow / Prefect** | Industry standard for massive DAG orchestration. | Extreme overkill for a single-step, bi-monthly batch job. |
 
-**Rationale:** To make the application truly production-grade and "deployable anywhere," we built the 15-day timing logic directly into the Python codebase using the `schedule` package, and then wrapped the entire application in a Docker Container. This ensures the timer logic is cleanly version-controlled in Git, while Docker safely handles the OS-level Process Management (restarting the daemon if the infrastructure ever fails).
+**Rationale / The Journey:**
+We initially built a Python daemon (`scheduler.py`) wrapped in Docker with `restart: always`, which is a solid portable solution. However, keeping a container (or VM) alive 24/7 just to execute a 60-second job every 15 days is architecturally wasteful. 
+
+By migrating to **Google Cloud Run Jobs** triggered by **Cloud Scheduler**, the container only exists for the ~60 seconds it takes to run the pipeline. Google handles all process management, restarts, and infrastructure. The Dockerfile stays in the repo as the deployment artifact — Cloud Run simply builds and runs it on demand.
+
+```
+Cloud Scheduler (every 15 days)
+  └──▶ Cloud Run Job (boots Docker container)
+         └──▶ python main.py --source live
+               └──▶ git push updated dashboard files
+                      └──▶ GitHub Pages auto-deploys
+```
 
 ## Decision 9: Cloud Cost Optimization Architecture
 
@@ -176,10 +188,12 @@ We immediately pivoted to generating a single batch of OpenAI `text-embedding-3-
 
 | Decision | Chosen | Key Reason |
 |---|---|---|
-| De-duplication | `difflib.SequenceMatcher` | Zero dependencies, sufficient for <200 articles, transparent |
-| Relevance Scoring | Weighted keyword matching | No training data, fully auditable, config-driven |
+| De-duplication | Semantic Vector Embeddings | Catches paraphrased duplicates that lexical matching misses |
+| Relevance Scoring | GPT-5.4 LLM Classification | Deep contextual understanding, zero-shot, structured JSON extraction |
 | Credibility | Tiered source dictionary | Transparent, deterministic, no bias issues |
-| Output Format | DOCX + Excel | Assignment requirement, editable, universal |
+| Output Format | DOCX + Excel + HTML + JSON | Multi-channel: executives, analysts, and web dashboard |
 | Data Source | RSS feeds + fallback | Free, no API keys, legally safe |
-| Dependencies | Minimal stdlib-first | Portable, fast install, fully readable |
+| Dependencies | OpenAI + lightweight stdlib | Portable, fast install, fully readable |
 | Architecture | Sequential script + CLI | Zero infrastructure, sufficient for linear pipeline |
+| Scheduling | Cloud Run Job + Cloud Scheduler | True serverless, zero idle compute, fully managed |
+| Cost Optimization | Funnel Filter Architecture | ~$0.01/month total operational cost |

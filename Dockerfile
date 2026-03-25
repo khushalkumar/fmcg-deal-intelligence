@@ -1,18 +1,24 @@
-# Use a lightweight Python base image optimized for production
+# ── Production Dockerfile ──────────────────────────────────
+# Designed for Google Cloud Run Jobs (serverless batch execution).
+# The container runs the pipeline ONCE and exits.
+# Cloud Scheduler handles the 15-day timing externally.
+
 FROM python:3.10-slim
 
-# Prevent memory buffering for Python logs
+# Prevent Python from buffering stdout/stderr
 ENV PYTHONUNBUFFERED=1
 
-# Set the working directory
 WORKDIR /app
 
-# Install dependencies first (leverages Docker cache for faster rebuilds)
+# Install git (needed to push updated dashboard files back to GitHub)
+RUN apt-get update && apt-get install -y --no-install-recommends git && rm -rf /var/lib/apt/lists/*
+
+# Install Python dependencies (cached layer)
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy the rest of the application code
+# Copy application code
 COPY . .
 
-# Set default command to run the infinite scheduler daemon
-CMD ["python", "scheduler.py"]
+# Run the pipeline once and exit (Cloud Scheduler triggers the next run)
+CMD ["python", "main.py", "--source", "live"]
