@@ -143,27 +143,27 @@ We initially implemented weighted keyword matching, which was transparent and ze
 
 ## Decision 8: Scheduling and Deployment
 
-**Chosen:** Google Cloud Run Job + Cloud Scheduler (Serverless)
-*(Evolved from: Python Daemon + Docker → Cloud Run Serverless)*
+**Chosen:** GitHub Actions Cron + GitHub Pages
+*(Evolved from: Python Daemon + Docker → Cloud Run → GitHub Actions)*
 
 | Approach | Pros | Cons |
 |---|---|---|
-| **Cloud Run Job + Cloud Scheduler** ✅ | True serverless — container boots for ~60s, runs pipeline, shuts down. Zero idle compute. Fully managed by Google (no OS patching, no SSH, no Docker daemon management). Free tier covers 360K GB-seconds/month. | Requires GCP account. Slight cold-start latency (acceptable for a batch job). |
-| **GCE VM + Docker Daemon** | Full control over the environment. Always-on server. | Wastes resources 99.9% of the time (alive 24/7 for a job that runs 60s every 15 days). Requires OS maintenance, SSH access, Docker updates. |
-| **GitHub Actions Cron** | $0, zero infrastructure. | Limited to 6-hour max job runtime. Secrets management less secure than GCP. Not a "real" cloud deployment. |
+| **GitHub Actions Cron** ✅ | $0 cost. Zero infrastructure to manage. Native `GITHUB_TOKEN` eliminates credential management for pushing updated files. Built-in secrets vault for the OpenAI API key. Bi-monthly cron trigger via `.github/workflows/pipeline.yml`. | Limited to 6-hour max job runtime (ours takes ~60s). Compute is shared (acceptable for a batch job). |
+| **Cloud Run Job + Cloud Scheduler** | True serverless. Zero idle compute. Fully managed by GCP. | Requires GCP account, Artifact Registry, and a GitHub PAT for pushing results back — adds credential complexity. |
+| **GCE VM + Docker Daemon** | Full control over the environment. Always-on server. | Wastes resources 99.9% of the time (alive 24/7 for a job that runs 60s every 15 days). Requires OS maintenance. |
 | **Apache Airflow / Prefect** | Industry standard for massive DAG orchestration. | Extreme overkill for a single-step, bi-monthly batch job. |
 
 **Rationale / The Journey:**
-We initially built a Python daemon (`scheduler.py`) wrapped in Docker with `restart: always`, which is a solid portable solution. However, keeping a container (or VM) alive 24/7 just to execute a 60-second job every 15 days is architecturally wasteful. 
+We initially built a Python daemon (`scheduler.py`) wrapped in Docker with `restart: always`, which is a solid portable solution. We then explored **Google Cloud Run Jobs** for true serverless execution. However, Cloud Run cannot natively push updated files back to GitHub without storing a separate GitHub PAT — adding credential management complexity.
 
-By migrating to **Google Cloud Run Jobs** triggered by **Cloud Scheduler**, the container only exists for the ~60 seconds it takes to run the pipeline. Google handles all process management, restarts, and infrastructure. The Dockerfile stays in the repo as the deployment artifact — Cloud Run simply builds and runs it on demand.
+**GitHub Actions** eliminates this entirely: it has native write access to the repository via `GITHUB_TOKEN`, runs our pipeline in ~60 seconds, commits the updated `docs/` files, and GitHub Pages automatically redeploys the dashboard. Total cost: $0. The Dockerfile and Cloud Run deployment guide (`DEPLOYMENT.md`) remain in the repo as the documented enterprise scale-up path.
 
 ```
-Cloud Scheduler (every 15 days)
-  └──▶ Cloud Run Job (boots Docker container)
+GitHub Actions Cron (1st & 15th of every month, 9:00 AM IST)
+  └──▶ Ubuntu runner boots, installs Python deps
          └──▶ python main.py --source live
-               └──▶ git push updated dashboard files
-                      └──▶ GitHub Pages auto-deploys
+               └──▶ git push updated docs/ files
+                      └──▶ GitHub Pages auto-deploys dashboard
 ```
 
 ## Decision 9: Cloud Cost Optimization Architecture
@@ -197,5 +197,5 @@ Cloud Scheduler (every 15 days)
 | Data Source | RSS feeds + fallback | Free, no API keys, legally safe |
 | Dependencies | OpenAI + lightweight stdlib | Portable, fast install, fully readable |
 | Architecture | Sequential script + CLI | Zero infrastructure, sufficient for linear pipeline |
-| Scheduling | Cloud Run Job + Cloud Scheduler | True serverless, zero idle compute, fully managed |
+| Scheduling | GitHub Actions Cron + GitHub Pages | $0, native repo access, zero credential mgmt |
 | Cost Optimization | Funnel Filter Architecture | ~$0.01/month total operational cost |
