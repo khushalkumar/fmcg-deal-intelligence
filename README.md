@@ -1,9 +1,18 @@
 # FMCG Deal Intelligence Newsletter Pipeline
 
-> An automated pipeline that aggregates, cleans, scores, and generates a structured newsletter on M&A / investment deal activity in the FMCG sector.
+> An automated, AI-powered pipeline that aggregates, de-duplicates, scores, and generates a structured newsletter on M&A / investment deal activity in the FMCG sector.
 
 **Built by:** Khushal Kumar  
 **Date:** March 2026
+
+### 🚀 Live Demo
+
+| | Link |
+|---|---|
+| **📊 Dashboard** | [khushalkumar.github.io/fmcg-deal-intelligence](https://khushalkumar.github.io/fmcg-deal-intelligence) |
+| **📖 HTML Newsletter** | [khushalkumar.github.io/fmcg-deal-intelligence/newsletter.html](https://khushalkumar.github.io/fmcg-deal-intelligence/newsletter.html) |
+
+> The dashboard auto-updates every 15 days via GitHub Actions. Each run scrapes live RSS feeds, scores articles with GPT-5.4, and pushes the results to this page.
 
 ---
 
