@@ -1,30 +1,29 @@
 {
-  "generated_at": "2026-03-26 05:33:02",
+  "generated_at": "2026-03-26 11:17:32",
   "title": "FMCG Deal Intelligence Weekly",
   "subtitle": "M&A, Investments & Strategic Moves in Consumer Goods",
   "stats": {
-    "total_ingested": 15,
+    "total_ingested": 14,
     "exact_duplicates_removed": 0,
-    "near_duplicates_removed": 2,
-    "after_dedup": 13,
-    "irrelevant_filtered": 9,
-    "after_relevance": 4,
-    "low_credibility_flagged": 3,
-    "final_count": 4,
+    "near_duplicates_removed": 3,
+    "after_dedup": 11,
+    "irrelevant_filtered": 8,
+    "after_relevance": 3,
+    "low_credibility_flagged": 2,
+    "final_count": 3,
     "source_breakdown": {
       "Reuters": 1,
       "Inside FMCG": 1,
-      "MSN": 1,
-      "AD HOC NEWS": 1
+      "MSN": 1
     },
     "deal_type_breakdown": {
-      "M&A": 4
+      "M&A": 3
     },
-    "processing_time_seconds": 25.86
+    "processing_time_seconds": 25.92
   },
-  "total_deals": 4,
+  "total_deals": 3,
   "deal_type_counts": {
-    "M&A": 4
+    "M&A": 3
   },
   "deals": [
     {
@@ -75,29 +74,11 @@
       "target": "Milk Mantra",
       "sector": "",
       "region": "",
-      "relevance_score": 88,
+      "relevance_score": 92,
       "credibility_score": 40,
       "credibility_tier": "Unknown",
       "is_low_credibility": true,
-      "combined_score": 68.8
-    },
-    {
-      "title": "Henkel AG & Co. KGaA (Vz.) stock gains on Olaplex acquisition talks and sustainability push amid CEO - AD HOC NEWS",
-      "source": "AD HOC NEWS",
-      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxORDFTLWN0eHI4YTJTUWdOZW55blc3YnlSeWstTFRHWVlBR0duSkFSaHEzaktXSWZTaXp1LTFGOWFrc3NaaUlKWGVNUkpHQndNZFVXSzFfcUQ0WEhNeXF3dzlQSFYwZzRHd0RBemY3WVE0b0N5TzBKZER3NzJGLWZnZ1NlVldMUlFiTUY0WlkxTE5ESVlCNkt1azhXbW04VThhYTFfSk9NR3hZcTZrS0JSQWlXakhHX1JfZ2tKWk51eW9jUQ?oc=5",
-      "published_date": "2026-03-26",
-      "summary": "Henkel AG & Co. KGaA (Vz.) stock gains on Olaplex acquisition talks and sustainability push amid CEO AD HOC NEWS",
-      "deal_type": "M&A",
-      "deal_value": "",
-      "buyer": "Henkel AG & Co. KGaA",
-      "target": "Olaplex",
-      "sector": "",
-      "region": "",
-      "relevance_score": 78,
-      "credibility_score": 40,
-      "credibility_tier": "Unknown",
-      "is_low_credibility": true,
-      "combined_score": 62.8
+      "combined_score": 71.2
     }
   ],
   "top_deals": [
@@ -149,29 +130,11 @@
       "target": "Milk Mantra",
       "sector": "",
       "region": "",
-      "relevance_score": 88,
+      "relevance_score": 92,
       "credibility_score": 40,
       "credibility_tier": "Unknown",
       "is_low_credibility": true,
-      "combined_score": 68.8
-    },
-    {
-      "title": "Henkel AG & Co. KGaA (Vz.) stock gains on Olaplex acquisition talks and sustainability push amid CEO - AD HOC NEWS",
-      "source": "AD HOC NEWS",
-      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxORDFTLWN0eHI4YTJTUWdOZW55blc3YnlSeWstTFRHWVlBR0duSkFSaHEzaktXSWZTaXp1LTFGOWFrc3NaaUlKWGVNUkpHQndNZFVXSzFfcUQ0WEhNeXF3dzlQSFYwZzRHd0RBemY3WVE0b0N5TzBKZER3NzJGLWZnZ1NlVldMUlFiTUY0WlkxTE5ESVlCNkt1azhXbW04VThhYTFfSk9NR3hZcTZrS0JSQWlXakhHX1JfZ2tKWk51eW9jUQ?oc=5",
-      "published_date": "2026-03-26",
-      "summary": "Henkel AG & Co. KGaA (Vz.) stock gains on Olaplex acquisition talks and sustainability push amid CEO AD HOC NEWS",
-      "deal_type": "M&A",
-      "deal_value": "",
-      "buyer": "Henkel AG & Co. KGaA",
-      "target": "Olaplex",
-      "sector": "",
-      "region": "",
-      "relevance_score": 78,
-      "credibility_score": 40,
-      "credibility_tier": "Unknown",
-      "is_low_credibility": true,
-      "combined_score": 62.8
+      "combined_score": 71.2
     }
   ]
 }

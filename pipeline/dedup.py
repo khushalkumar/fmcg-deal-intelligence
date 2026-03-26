@@ -98,7 +98,9 @@ def _merge_near_duplicates(
     credibility_scores: Dict[str, float] = None,
 ) -> Tuple[List[RawDeal], int]:
     """
-    Detect near-duplicate articles using OpenAI Semantic Vector Embeddings.
+    Detect near-duplicate articles using a two-tier strategy:
+        Tier 1: Cosine Similarity >= threshold → auto-merge (high confidence)
+        Tier 2: Cosine Similarity in [grey_zone, threshold) → LLM verification
     """
     if not deals:
         return deals, 0
@@ -119,10 +121,11 @@ def _merge_near_duplicates(
         return deals, 0
 
     n = len(deals)
+    grey_zone_threshold = 0.60  # Below this, articles are definitely different
     
     # Batch generate embeddings to save time/requests
     texts = [_normalize_text(d.title + " " + d.summary) for d in deals]
-    texts = [t[:8000] if len(t) > 8000 else t for t in texts] # Safe truncation
+    texts = [t[:8000] if len(t) > 8000 else t for t in texts]  # Safe truncation
     
     try:
         logger.info(f"Generating semantic embeddings for {n} articles...")
@@ -142,6 +145,8 @@ def _merge_near_duplicates(
         return dot / (norm1 * norm2)
 
     # Find near-duplicate pairs via Cosine Similarity
+    grey_zone_pairs = []  # Pairs that need LLM verification
+    
     for i in range(n):
         for j in range(i + 1, n):
             if _find_root(group_id, i) == _find_root(group_id, j):
@@ -150,12 +155,43 @@ def _merge_near_duplicates(
             similarity = _cosine_similarity(embeddings[i], embeddings[j])
 
             if similarity >= threshold:
+                # Tier 1: High confidence — auto-merge
                 logger.info(
-                    f"Semantic duplicate detected (similarity={similarity:.2f}):\n"
+                    f"Semantic duplicate detected (similarity={similarity:.3f}):\n"
                     f"  [{deals[i].source}] {deals[i].title[:80]}\n"
                     f"  [{deals[j].source}] {deals[j].title[:80]}"
                 )
                 _union(group_id, i, j)
+            elif similarity >= grey_zone_threshold:
+                # Tier 2: Grey zone — collect for LLM verification
+                grey_zone_pairs.append((i, j, similarity))
+                logger.info(
+                    f"Grey zone pair (similarity={similarity:.3f}) — queued for LLM check:\n"
+                    f"  [{deals[i].source}] {deals[i].title[:80]}\n"
+                    f"  [{deals[j].source}] {deals[j].title[:80]}"
+                )
+
+    # Tier 2: LLM verification for grey-zone pairs
+    if grey_zone_pairs:
+        logger.info(f"Verifying {len(grey_zone_pairs)} grey-zone pairs with LLM...")
+        for i, j, sim in grey_zone_pairs:
+            if _find_root(group_id, i) == _find_root(group_id, j):
+                continue  # Already merged via another path
+            
+            is_same = _llm_verify_duplicate(client, deals[i], deals[j])
+            if is_same:
+                logger.info(
+                    f"LLM confirmed duplicate (cosine={sim:.3f}):\n"
+                    f"  [{deals[i].source}] {deals[i].title[:80]}\n"
+                    f"  [{deals[j].source}] {deals[j].title[:80]}"
+                )
+                _union(group_id, i, j)
+            else:
+                logger.info(
+                    f"LLM says NOT duplicate (cosine={sim:.3f}):\n"
+                    f"  [{deals[i].source}] {deals[i].title[:80]}\n"
+                    f"  [{deals[j].source}] {deals[j].title[:80]}"
+                )
 
     # Collect groups
     groups: Dict[int, List[int]] = {}
@@ -187,6 +223,45 @@ def _merge_near_duplicates(
             )
 
     return kept, near_removed
+
+
+def _llm_verify_duplicate(client, deal_a: RawDeal, deal_b: RawDeal) -> bool:
+    """
+    Use LLM to verify if two articles describe the same deal/event.
+    This is the final arbiter for borderline cosine similarity pairs.
+    Returns True if they are duplicates.
+    """
+    try:
+        response = client.chat.completions.create(
+            model="gpt-4o-mini",
+            temperature=0,
+            max_tokens=10,
+            messages=[
+                {
+                    "role": "system",
+                    "content": (
+                        "You are a financial news deduplication expert. "
+                        "Determine if two article headlines describe the SAME specific deal or business event. "
+                        "Reply with ONLY 'YES' or 'NO'."
+                    ),
+                },
+                {
+                    "role": "user",
+                    "content": (
+                        f"Article A: {deal_a.title}\n"
+                        f"Source A: {deal_a.source}\n\n"
+                        f"Article B: {deal_b.title}\n"
+                        f"Source B: {deal_b.source}\n\n"
+                        "Do these describe the SAME specific deal or business event?"
+                    ),
+                },
+            ],
+        )
+        answer = response.choices[0].message.content.strip().upper()
+        return answer.startswith("YES")
+    except Exception as e:
+        logger.warning(f"LLM dedup verification failed: {e}")
+        return False  # Conservative: don't merge if unsure
 
 
 # ── Union-Find Helpers ────────────────────────────────────────
