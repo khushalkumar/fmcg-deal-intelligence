@@ -1,30 +1,29 @@
 {
-  "generated_at": "2026-03-26 19:45:37",
+  "generated_at": "2026-03-27 00:34:05",
   "title": "FMCG Deal Intelligence Weekly",
   "subtitle": "M&A, Investments & Strategic Moves in Consumer Goods",
   "stats": {
-    "total_ingested": 14,
+    "total_ingested": 16,
     "exact_duplicates_removed": 0,
-    "near_duplicates_removed": 1,
+    "near_duplicates_removed": 3,
     "after_dedup": 13,
-    "irrelevant_filtered": 9,
-    "after_relevance": 4,
-    "low_credibility_flagged": 3,
-    "final_count": 4,
+    "irrelevant_filtered": 10,
+    "after_relevance": 3,
+    "low_credibility_flagged": 2,
+    "final_count": 3,
     "source_breakdown": {
       "Reuters": 1,
       "Inside FMCG": 1,
-      "MSN": 1,
-      "AD HOC NEWS": 1
+      "Investing.com India": 1
     },
     "deal_type_breakdown": {
-      "M&A": 4
+      "M&A": 3
     },
-    "processing_time_seconds": 27.33
+    "processing_time_seconds": 32.06
   },
-  "total_deals": 4,
+  "total_deals": 3,
   "deal_type_counts": {
-    "M&A": 4
+    "M&A": 3
   },
   "deals": [
     {
@@ -64,40 +63,22 @@
       "combined_score": 75.4
     },
     {
-      "title": "FMCG stock jumps after NCLT approves merger with Milk Mantra - MSN",
-      "source": "MSN",
-      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNSThvLUYtMmI5VGN2cHNRRG50c09JZkluZVRqVDluYmt4SEJXUnJVSzVnVDVrbFFpb2tmNlBFVmlqSjcwOWVRdGZoZjFYZnRITHNiYlZuWFpZTTJsUkFSNlhFaHc2QWxONEtQUUROWWRFT2YxTGhpR2FBYlBSUTRROV9zb2RwNkJtUWhkQTQxMlhKRVEzLXYxUnk5U2VTNVUzdTlfNmZuMlg2d2o5TWJ0djZn?oc=5",
-      "published_date": "2026-03-23",
-      "summary": "FMCG stock jumps after NCLT approves merger with Milk Mantra MSN",
+      "title": "FMCG Stock Jumps After NCLT Approves Merger with Milk Mantra By Trade Brains - Investing.com India",
+      "source": "Investing.com India",
+      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNY3RERFkzNTVBU0FEcXQwTHEtbzFUREtjT0gxTFk1WnB2UVk2V2dMQk1UemVPdlBENndwcGpjb2ZneEctSGlCSkdUX0RvMVdtczYwMDd1aG1zVDBHU1VJV29uUjl3TzdyckcxZFZCa3JvTzdaaXdDWVV0MGM5dW5yTmdfV2NMbzQ1WHJKdTFZazNvT0ExX09qMlRaeXlNTEkzT3hLeVhDUU02R0NQV1duZGw5c1dnRnM?oc=5",
+      "published_date": "2026-03-12",
+      "summary": "FMCG Stock Jumps After NCLT Approves Merger with Milk Mantra By Trade Brains Investing.com India",
       "deal_type": "M&A",
       "deal_value": "",
       "buyer": "",
       "target": "Milk Mantra",
       "sector": "",
       "region": "",
-      "relevance_score": 88,
+      "relevance_score": 93,
       "credibility_score": 40,
       "credibility_tier": "Unknown",
       "is_low_credibility": true,
-      "combined_score": 68.8
-    },
-    {
-      "title": "Henkel AG & Co. KGaA (Vz.) stock gains on Olaplex acquisition talks and sustainability push amid CEO - AD HOC NEWS",
-      "source": "AD HOC NEWS",
-      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxORDFTLWN0eHI4YTJTUWdOZW55blc3YnlSeWstTFRHWVlBR0duSkFSaHEzaktXSWZTaXp1LTFGOWFrc3NaaUlKWGVNUkpHQndNZFVXSzFfcUQ0WEhNeXF3dzlQSFYwZzRHd0RBemY3WVE0b0N5TzBKZER3NzJGLWZnZ1NlVldMUlFiTUY0WlkxTE5ESVlCNkt1azhXbW04VThhYTFfSk9NR3hZcTZrS0JSQWlXakhHX1JfZ2tKWk51eW9jUQ?oc=5",
-      "published_date": "2026-03-26",
-      "summary": "Henkel AG & Co. KGaA (Vz.) stock gains on Olaplex acquisition talks and sustainability push amid CEO AD HOC NEWS",
-      "deal_type": "M&A",
-      "deal_value": "",
-      "buyer": "Henkel AG & Co. KGaA",
-      "target": "Olaplex",
-      "sector": "",
-      "region": "",
-      "relevance_score": 72,
-      "credibility_score": 40,
-      "credibility_tier": "Unknown",
-      "is_low_credibility": true,
-      "combined_score": 59.2
+      "combined_score": 71.8
     }
   ],
   "top_deals": [
@@ -138,40 +119,22 @@
       "combined_score": 75.4
     },
     {
-      "title": "FMCG stock jumps after NCLT approves merger with Milk Mantra - MSN",
-      "source": "MSN",
-      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNSThvLUYtMmI5VGN2cHNRRG50c09JZkluZVRqVDluYmt4SEJXUnJVSzVnVDVrbFFpb2tmNlBFVmlqSjcwOWVRdGZoZjFYZnRITHNiYlZuWFpZTTJsUkFSNlhFaHc2QWxONEtQUUROWWRFT2YxTGhpR2FBYlBSUTRROV9zb2RwNkJtUWhkQTQxMlhKRVEzLXYxUnk5U2VTNVUzdTlfNmZuMlg2d2o5TWJ0djZn?oc=5",
-      "published_date": "2026-03-23",
-      "summary": "FMCG stock jumps after NCLT approves merger with Milk Mantra MSN",
+      "title": "FMCG Stock Jumps After NCLT Approves Merger with Milk Mantra By Trade Brains - Investing.com India",
+      "source": "Investing.com India",
+      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNY3RERFkzNTVBU0FEcXQwTHEtbzFUREtjT0gxTFk1WnB2UVk2V2dMQk1UemVPdlBENndwcGpjb2ZneEctSGlCSkdUX0RvMVdtczYwMDd1aG1zVDBHU1VJV29uUjl3TzdyckcxZFZCa3JvTzdaaXdDWVV0MGM5dW5yTmdfV2NMbzQ1WHJKdTFZazNvT0ExX09qMlRaeXlNTEkzT3hLeVhDUU02R0NQV1duZGw5c1dnRnM?oc=5",
+      "published_date": "2026-03-12",
+      "summary": "FMCG Stock Jumps After NCLT Approves Merger with Milk Mantra By Trade Brains Investing.com India",
       "deal_type": "M&A",
       "deal_value": "",
       "buyer": "",
       "target": "Milk Mantra",
       "sector": "",
       "region": "",
-      "relevance_score": 88,
+      "relevance_score": 93,
       "credibility_score": 40,
       "credibility_tier": "Unknown",
       "is_low_credibility": true,
-      "combined_score": 68.8
-    },
-    {
-      "title": "Henkel AG & Co. KGaA (Vz.) stock gains on Olaplex acquisition talks and sustainability push amid CEO - AD HOC NEWS",
-      "source": "AD HOC NEWS",
-      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxORDFTLWN0eHI4YTJTUWdOZW55blc3YnlSeWstTFRHWVlBR0duSkFSaHEzaktXSWZTaXp1LTFGOWFrc3NaaUlKWGVNUkpHQndNZFVXSzFfcUQ0WEhNeXF3dzlQSFYwZzRHd0RBemY3WVE0b0N5TzBKZER3NzJGLWZnZ1NlVldMUlFiTUY0WlkxTE5ESVlCNkt1azhXbW04VThhYTFfSk9NR3hZcTZrS0JSQWlXakhHX1JfZ2tKWk51eW9jUQ?oc=5",
-      "published_date": "2026-03-26",
-      "summary": "Henkel AG & Co. KGaA (Vz.) stock gains on Olaplex acquisition talks and sustainability push amid CEO AD HOC NEWS",
-      "deal_type": "M&A",
-      "deal_value": "",
-      "buyer": "Henkel AG & Co. KGaA",
-      "target": "Olaplex",
-      "sector": "",
-      "region": "",
-      "relevance_score": 72,
-      "credibility_score": 40,
-      "credibility_tier": "Unknown",
-      "is_low_credibility": true,
-      "combined_score": 59.2
+      "combined_score": 71.8
     }
   ]
 }
