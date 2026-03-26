@@ -233,7 +233,7 @@ def _llm_verify_duplicate(client, deal_a: RawDeal, deal_b: RawDeal) -> bool:
     """
     try:
         response = client.chat.completions.create(
-            model="gpt-4o-mini",
+            model="gpt-5.4",
             temperature=0,
             max_tokens=10,
             messages=[
