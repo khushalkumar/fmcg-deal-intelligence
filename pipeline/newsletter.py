@@ -17,7 +17,7 @@ import csv
 import json
 import logging
 import os
-from datetime import datetime
+from datetime import datetime, timezone, timedelta
 from typing import Dict, List
 
 logger = logging.getLogger(__name__)
@@ -411,7 +411,7 @@ def _generate_dashboard_json(
 
     # Build dashboard data
     dashboard_data = {
-        "generated_at": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+        "generated_at": datetime.now(timezone(timedelta(hours=5, minutes=30))).strftime("%Y-%m-%d %H:%M:%S"),
         "title": newsletter_config.get("title", "FMCG Deal Intelligence Weekly"),
         "subtitle": newsletter_config.get("subtitle", ""),
         "stats": stats_dict,
