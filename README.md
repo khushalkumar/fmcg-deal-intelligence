@@ -14,6 +14,19 @@
 
 > The dashboard auto-updates every 15 days via GitHub Actions. Each run scrapes live RSS feeds, scores articles with GPT-5.4, and pushes the results to this page.
 
+### Key Engineering Capabilities Demonstrated
+
+| Capability | Implementation |
+|---|---|
+| 🔄 **Automated ETL Pipeline** | 6-stage sequential pipeline with CLI, logging, and error handling |
+| 🤖 **AI-Powered Scoring & Entity Extraction** | GPT-5.4 for zero-shot FMCG deal classification + structured JSON extraction |
+| 🧠 **Semantic Deduplication** | OpenAI `text-embedding-3-small` vectors + Cosine Similarity |
+| 🗄️ **Database Persistence** | SQLite with cross-run deduplication and historical trend storage |
+| 📊 **Live Dashboard** | Vanilla HTML/CSS/JS dashboard auto-deployed on GitHub Pages |
+| ⚙️ **CI/CD Automation** | GitHub Actions bi-monthly cron job with auto-commit |
+| 🐳 **Cloud Architecture** | Dockerfile + GCP Cloud Run deployment guide (`DEPLOYMENT.md`) |
+| 📝 **Design Documentation** | 9 design decisions with alternatives, trade-offs, and rationale |
+
 ---
 
 ## Pipeline Architecture
