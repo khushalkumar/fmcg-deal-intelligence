@@ -1,48 +1,49 @@
 {
-  "generated_at": "2026-03-26 11:17:32",
+  "generated_at": "2026-03-26 09:16:47",
   "title": "FMCG Deal Intelligence Weekly",
   "subtitle": "M&A, Investments & Strategic Moves in Consumer Goods",
   "stats": {
-    "total_ingested": 14,
+    "total_ingested": 15,
     "exact_duplicates_removed": 0,
-    "near_duplicates_removed": 3,
-    "after_dedup": 11,
-    "irrelevant_filtered": 8,
-    "after_relevance": 3,
-    "low_credibility_flagged": 2,
-    "final_count": 3,
+    "near_duplicates_removed": 2,
+    "after_dedup": 13,
+    "irrelevant_filtered": 9,
+    "after_relevance": 4,
+    "low_credibility_flagged": 3,
+    "final_count": 4,
     "source_breakdown": {
       "Reuters": 1,
       "Inside FMCG": 1,
-      "MSN": 1
+      "Investing.com India": 1,
+      "AD HOC NEWS": 1
     },
     "deal_type_breakdown": {
-      "M&A": 3
+      "M&A": 4
     },
-    "processing_time_seconds": 25.92
+    "processing_time_seconds": 22.58
   },
-  "total_deals": 3,
+  "total_deals": 4,
   "deal_type_counts": {
-    "M&A": 3
+    "M&A": 4
   },
   "deals": [
     {
-      "title": "Germany's Henkel nears deal for hair care brand Olaplex, Bloomberg News reports - Reuters",
+      "title": "Germany's Henkel in $1.4 billion deal to acquire hair care brand Olaplex - Reuters",
       "source": "Reuters",
       "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPTU9FVEltelIyVHpMVC02VUVKZFlSOGZ5RlZ5cG9YNkdNS1R3cEFSS3dyX0JUSU8zWXlWZ1V2a0NDc0lGWTlZVXdEVmpuYi1Ed1VvM2hyemNJeWtFejk2ay10eHU1Y3MzcWduQ0JDbHZNdjluMmIzNXktQ0NVU2lHVjNjd0RkTGZ5T1IwWmZqUDNuQy1HZW95NFV0UDg0emx6N0FyUUs0d0p6TUd3Ykc1NlY4cmdiQmt1TFE?oc=5",
       "published_date": "2026-03-26",
-      "summary": "Germany's Henkel nears deal for hair care brand Olaplex, Bloomberg News reports Reuters",
+      "summary": "Germany's Henkel in $1.4 billion deal to acquire hair care brand Olaplex Reuters",
       "deal_type": "M&A",
-      "deal_value": "",
+      "deal_value": "$1.4 billion",
       "buyer": "Henkel",
       "target": "Olaplex",
       "sector": "",
       "region": "",
-      "relevance_score": 96,
+      "relevance_score": 99,
       "credibility_score": 95,
       "credibility_tier": "Tier 1 — Premier",
       "is_low_credibility": false,
-      "combined_score": 95.6
+      "combined_score": 97.4
     },
     {
       "title": "Danone announces $1.6bn acquisition of nutrition drink Huel - Inside FMCG",
@@ -63,42 +64,60 @@
       "combined_score": 75.4
     },
     {
-      "title": "FMCG stock jumps after NCLT approves merger with Milk Mantra - MSN",
-      "source": "MSN",
-      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNSThvLUYtMmI5VGN2cHNRRG50c09JZkluZVRqVDluYmt4SEJXUnJVSzVnVDVrbFFpb2tmNlBFVmlqSjcwOWVRdGZoZjFYZnRITHNiYlZuWFpZTTJsUkFSNlhFaHc2QWxONEtQUUROWWRFT2YxTGhpR2FBYlBSUTRROV9zb2RwNkJtUWhkQTQxMlhKRVEzLXYxUnk5U2VTNVUzdTlfNmZuMlg2d2o5TWJ0djZn?oc=5",
-      "published_date": "2026-03-23",
-      "summary": "FMCG stock jumps after NCLT approves merger with Milk Mantra MSN",
+      "title": "FMCG Stock Jumps After NCLT Approves Merger with Milk Mantra By Trade Brains - Investing.com India",
+      "source": "Investing.com India",
+      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNY3RERFkzNTVBU0FEcXQwTHEtbzFUREtjT0gxTFk1WnB2UVk2V2dMQk1UemVPdlBENndwcGpjb2ZneEctSGlCSkdUX0RvMVdtczYwMDd1aG1zVDBHU1VJV29uUjl3TzdyckcxZFZCa3JvTzdaaXdDWVV0MGM5dW5yTmdfV2NMbzQ1WHJKdTFZazNvT0ExX09qMlRaeXlNTEkzT3hLeVhDUU02R0NQV1duZGw5c1dnRnM?oc=5",
+      "published_date": "2026-03-12",
+      "summary": "FMCG Stock Jumps After NCLT Approves Merger with Milk Mantra By Trade Brains Investing.com India",
       "deal_type": "M&A",
       "deal_value": "",
       "buyer": "",
       "target": "Milk Mantra",
       "sector": "",
       "region": "",
-      "relevance_score": 92,
+      "relevance_score": 93,
       "credibility_score": 40,
       "credibility_tier": "Unknown",
       "is_low_credibility": true,
-      "combined_score": 71.2
+      "combined_score": 71.8
+    },
+    {
+      "title": "Henkel AG & Co. KGaA (Vz.) stock gains on Olaplex acquisition talks and sustainability push amid CEO - AD HOC NEWS",
+      "source": "AD HOC NEWS",
+      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxORDFTLWN0eHI4YTJTUWdOZW55blc3YnlSeWstTFRHWVlBR0duSkFSaHEzaktXSWZTaXp1LTFGOWFrc3NaaUlKWGVNUkpHQndNZFVXSzFfcUQ0WEhNeXF3dzlQSFYwZzRHd0RBemY3WVE0b0N5TzBKZER3NzJGLWZnZ1NlVldMUlFiTUY0WlkxTE5ESVlCNkt1azhXbW04VThhYTFfSk9NR3hZcTZrS0JSQWlXakhHX1JfZ2tKWk51eW9jUQ?oc=5",
+      "published_date": "2026-03-26",
+      "summary": "Henkel AG & Co. KGaA (Vz.) stock gains on Olaplex acquisition talks and sustainability push amid CEO AD HOC NEWS",
+      "deal_type": "M&A",
+      "deal_value": "",
+      "buyer": "Henkel AG & Co. KGaA",
+      "target": "Olaplex",
+      "sector": "",
+      "region": "",
+      "relevance_score": 72,
+      "credibility_score": 40,
+      "credibility_tier": "Unknown",
+      "is_low_credibility": true,
+      "combined_score": 59.2
     }
   ],
   "top_deals": [
     {
-      "title": "Germany's Henkel nears deal for hair care brand Olaplex, Bloomberg News reports - Reuters",
+      "title": "Germany's Henkel in $1.4 billion deal to acquire hair care brand Olaplex - Reuters",
       "source": "Reuters",
       "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPTU9FVEltelIyVHpMVC02VUVKZFlSOGZ5RlZ5cG9YNkdNS1R3cEFSS3dyX0JUSU8zWXlWZ1V2a0NDc0lGWTlZVXdEVmpuYi1Ed1VvM2hyemNJeWtFejk2ay10eHU1Y3MzcWduQ0JDbHZNdjluMmIzNXktQ0NVU2lHVjNjd0RkTGZ5T1IwWmZqUDNuQy1HZW95NFV0UDg0emx6N0FyUUs0d0p6TUd3Ykc1NlY4cmdiQmt1TFE?oc=5",
       "published_date": "2026-03-26",
-      "summary": "Germany's Henkel nears deal for hair care brand Olaplex, Bloomberg News reports Reuters",
+      "summary": "Germany's Henkel in $1.4 billion deal to acquire hair care brand Olaplex Reuters",
       "deal_type": "M&A",
-      "deal_value": "",
+      "deal_value": "$1.4 billion",
       "buyer": "Henkel",
       "target": "Olaplex",
       "sector": "",
       "region": "",
-      "relevance_score": 96,
+      "relevance_score": 99,
       "credibility_score": 95,
       "credibility_tier": "Tier 1 — Premier",
       "is_low_credibility": false,
-      "combined_score": 95.6
+      "combined_score": 97.4
     },
     {
       "title": "Danone announces $1.6bn acquisition of nutrition drink Huel - Inside FMCG",
@@ -119,22 +138,40 @@
       "combined_score": 75.4
     },
     {
-      "title": "FMCG stock jumps after NCLT approves merger with Milk Mantra - MSN",
-      "source": "MSN",
-      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNSThvLUYtMmI5VGN2cHNRRG50c09JZkluZVRqVDluYmt4SEJXUnJVSzVnVDVrbFFpb2tmNlBFVmlqSjcwOWVRdGZoZjFYZnRITHNiYlZuWFpZTTJsUkFSNlhFaHc2QWxONEtQUUROWWRFT2YxTGhpR2FBYlBSUTRROV9zb2RwNkJtUWhkQTQxMlhKRVEzLXYxUnk5U2VTNVUzdTlfNmZuMlg2d2o5TWJ0djZn?oc=5",
-      "published_date": "2026-03-23",
-      "summary": "FMCG stock jumps after NCLT approves merger with Milk Mantra MSN",
+      "title": "FMCG Stock Jumps After NCLT Approves Merger with Milk Mantra By Trade Brains - Investing.com India",
+      "source": "Investing.com India",
+      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNY3RERFkzNTVBU0FEcXQwTHEtbzFUREtjT0gxTFk1WnB2UVk2V2dMQk1UemVPdlBENndwcGpjb2ZneEctSGlCSkdUX0RvMVdtczYwMDd1aG1zVDBHU1VJV29uUjl3TzdyckcxZFZCa3JvTzdaaXdDWVV0MGM5dW5yTmdfV2NMbzQ1WHJKdTFZazNvT0ExX09qMlRaeXlNTEkzT3hLeVhDUU02R0NQV1duZGw5c1dnRnM?oc=5",
+      "published_date": "2026-03-12",
+      "summary": "FMCG Stock Jumps After NCLT Approves Merger with Milk Mantra By Trade Brains Investing.com India",
       "deal_type": "M&A",
       "deal_value": "",
       "buyer": "",
       "target": "Milk Mantra",
       "sector": "",
       "region": "",
-      "relevance_score": 92,
+      "relevance_score": 93,
       "credibility_score": 40,
       "credibility_tier": "Unknown",
       "is_low_credibility": true,
-      "combined_score": 71.2
+      "combined_score": 71.8
+    },
+    {
+      "title": "Henkel AG & Co. KGaA (Vz.) stock gains on Olaplex acquisition talks and sustainability push amid CEO - AD HOC NEWS",
+      "source": "AD HOC NEWS",
+      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxORDFTLWN0eHI4YTJTUWdOZW55blc3YnlSeWstTFRHWVlBR0duSkFSaHEzaktXSWZTaXp1LTFGOWFrc3NaaUlKWGVNUkpHQndNZFVXSzFfcUQ0WEhNeXF3dzlQSFYwZzRHd0RBemY3WVE0b0N5TzBKZER3NzJGLWZnZ1NlVldMUlFiTUY0WlkxTE5ESVlCNkt1azhXbW04VThhYTFfSk9NR3hZcTZrS0JSQWlXakhHX1JfZ2tKWk51eW9jUQ?oc=5",
+      "published_date": "2026-03-26",
+      "summary": "Henkel AG & Co. KGaA (Vz.) stock gains on Olaplex acquisition talks and sustainability push amid CEO AD HOC NEWS",
+      "deal_type": "M&A",
+      "deal_value": "",
+      "buyer": "Henkel AG & Co. KGaA",
+      "target": "Olaplex",
+      "sector": "",
+      "region": "",
+      "relevance_score": 72,
+      "credibility_score": 40,
+      "credibility_tier": "Unknown",
+      "is_low_credibility": true,
+      "combined_score": 59.2
     }
   ]
 }
