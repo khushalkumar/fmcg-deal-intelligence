@@ -35,22 +35,27 @@
 
 ## Decision 1: De-Duplication Method
 
-**Chosen:** `OpenAI Semantic Vector Embeddings (text-embedding-3-small)` + `Cosine Similarity`
-*(Upgraded from `difflib` Lexical Matching)*
+**Chosen:** Two-Tier Semantic Deduplication (Embeddings + LLM Verification)
+*(Evolved from: `difflib` → Embeddings-only → Two-Tier)*
 
 | Approach | Pros | Cons |
 |---|---|---|
-| **Semantic Embeddings** ✅ | Deep semantic understanding — catches paraphrases and completely differently-worded headlines about the exact same event. | Requires OpenAI API. Extremely low cost (`$0.02` per 1 million tokens), but still a non-zero dependency. |
-| **difflib.SequenceMatcher** | Zero dependencies, built into Python. Fully transparent. | Failed on the "Danone Huel" edge-case. Lexical scanning missed the duplicate because the journalists used different vocabulary sizes for the exact same event. |
-| **TF-IDF + Cosine Similarity** | Weights term importance. | High-dimensional sparse vectors. Still ignores word order and true semantic meaning. |
+| **Two-Tier: Embeddings + LLM** ✅ | Tier 1 auto-merges high-confidence matches (cosine ≥ 0.80). Tier 2 escalates borderline pairs (0.60–0.80) to an LLM judge for a YES/NO verdict. Catches edge cases that pure vector similarity misses. | Two API calls for grey-zone pairs (one embedding, one LLM). Still negligible cost (~$0.0002 per grey-zone pair). |
+| **Embeddings Only** | Single API call. Fast batch processing. | Failed on the "Henkel Olaplex" edge case — cosine similarity was only 0.699 because one headline was news-style and the other was stock-market-style. |
+| **difflib.SequenceMatcher** | Zero dependencies, built into Python. | Failed on the "Danone Huel" edge case. Lexical matching missed paraphrased duplicates entirely. |
+| **TF-IDF + Cosine Similarity** | Weights term importance. | High-dimensional sparse vectors. Ignores word order and true semantic meaning. |
 
-**Rationale / The Journey:** 
-We originally implemented Python's built-in `difflib` lexical matcher to save costs and dependencies. However, during live testing, we observed a critical edge-case failure:
-* Article 1: *"Danone announces $1.6bn acquisition of nutrition drink Huel"*
-* Article 2: *"Danone Grows into Functional Nutrition with Huel Acquisition"*
+**Rationale / The Journey:**
+We went through **three iterations** of de-duplication, each solving a real production failure:
 
-Even though these articles described the exact same FMCG deal, their character structures were too distinct, yielding a lexical similarity score below 80%. This caused duplicates to slip into the newsletter.
-We immediately pivoted to generating a single batch of OpenAI `text-embedding-3-small` vector embeddings for the articles and mathematically calculating their Cosine Similarity. Because vector embeddings understand *semantic meaning* rather than *character spelling*, the two articles mathematically align natively, fixing the duplicate bug instantly for fractions of a penny.
+1. **v1 — `difflib` (Lexical Matching):** Failed when two articles about the Danone/Huel acquisition used completely different vocabulary. Lexical similarity was below 80%.
+
+2. **v2 — OpenAI Embeddings (Cosine Similarity ≥ 0.80):** Fixed the Danone case. But during the first live production run, we discovered a new edge case:
+   * *"Germany's Henkel nears deal for hair care brand Olaplex"* (Reuters — news style)
+   * *"Henkel AG stock gains on Olaplex acquisition talks"* (AD HOC NEWS — stock market style)
+   * Cosine similarity: **0.699** — below the 0.80 threshold. Same deal, different framing.
+
+3. **v3 — Two-Tier (current):** Pairs in the 0.60–0.80 "grey zone" are now escalated to a GPT-5.4 LLM call that simply answers YES or NO: *"Do these describe the same deal?"* The LLM instantly confirmed the Henkel duplicate. Cost per verification: ~$0.0002.
 
 ---
 
@@ -190,7 +195,7 @@ GitHub Actions Cron (1st & 15th of every month, 9:00 AM IST)
 
 | Decision | Chosen | Key Reason |
 |---|---|---|
-| De-duplication | Semantic Vector Embeddings | Catches paraphrased duplicates that lexical matching misses |
+| De-duplication | Two-Tier: Embeddings + LLM | Cosine Sim for high-confidence, LLM judge for grey-zone pairs |
 | Relevance Scoring | GPT-5.4 LLM Classification | Deep contextual understanding, zero-shot, structured JSON extraction |
 | Credibility | Tiered source dictionary | Transparent, deterministic, no bias issues |
 | Output Format | DOCX + Excel + HTML + JSON | Multi-channel: executives, analysts, and web dashboard |
