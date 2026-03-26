@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-03-26 09:16:47",
+  "generated_at": "2026-03-26 19:45:37",
   "title": "FMCG Deal Intelligence Weekly",
   "subtitle": "M&A, Investments & Strategic Moves in Consumer Goods",
   "stats": {
-    "total_ingested": 15,
+    "total_ingested": 14,
     "exact_duplicates_removed": 0,
-    "near_duplicates_removed": 2,
+    "near_duplicates_removed": 1,
     "after_dedup": 13,
     "irrelevant_filtered": 9,
     "after_relevance": 4,
@@ -14,13 +14,13 @@
     "source_breakdown": {
       "Reuters": 1,
       "Inside FMCG": 1,
-      "Investing.com India": 1,
+      "MSN": 1,
       "AD HOC NEWS": 1
     },
     "deal_type_breakdown": {
       "M&A": 4
     },
-    "processing_time_seconds": 22.58
+    "processing_time_seconds": 27.33
   },
   "total_deals": 4,
   "deal_type_counts": {
@@ -64,22 +64,22 @@
       "combined_score": 75.4
     },
     {
-      "title": "FMCG Stock Jumps After NCLT Approves Merger with Milk Mantra By Trade Brains - Investing.com India",
-      "source": "Investing.com India",
-      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNY3RERFkzNTVBU0FEcXQwTHEtbzFUREtjT0gxTFk1WnB2UVk2V2dMQk1UemVPdlBENndwcGpjb2ZneEctSGlCSkdUX0RvMVdtczYwMDd1aG1zVDBHU1VJV29uUjl3TzdyckcxZFZCa3JvTzdaaXdDWVV0MGM5dW5yTmdfV2NMbzQ1WHJKdTFZazNvT0ExX09qMlRaeXlNTEkzT3hLeVhDUU02R0NQV1duZGw5c1dnRnM?oc=5",
-      "published_date": "2026-03-12",
-      "summary": "FMCG Stock Jumps After NCLT Approves Merger with Milk Mantra By Trade Brains Investing.com India",
+      "title": "FMCG stock jumps after NCLT approves merger with Milk Mantra - MSN",
+      "source": "MSN",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNSThvLUYtMmI5VGN2cHNRRG50c09JZkluZVRqVDluYmt4SEJXUnJVSzVnVDVrbFFpb2tmNlBFVmlqSjcwOWVRdGZoZjFYZnRITHNiYlZuWFpZTTJsUkFSNlhFaHc2QWxONEtQUUROWWRFT2YxTGhpR2FBYlBSUTRROV9zb2RwNkJtUWhkQTQxMlhKRVEzLXYxUnk5U2VTNVUzdTlfNmZuMlg2d2o5TWJ0djZn?oc=5",
+      "published_date": "2026-03-23",
+      "summary": "FMCG stock jumps after NCLT approves merger with Milk Mantra MSN",
       "deal_type": "M&A",
       "deal_value": "",
       "buyer": "",
       "target": "Milk Mantra",
       "sector": "",
       "region": "",
-      "relevance_score": 93,
+      "relevance_score": 88,
       "credibility_score": 40,
       "credibility_tier": "Unknown",
       "is_low_credibility": true,
-      "combined_score": 71.8
+      "combined_score": 68.8
     },
     {
       "title": "Henkel AG & Co. KGaA (Vz.) stock gains on Olaplex acquisition talks and sustainability push amid CEO - AD HOC NEWS",
@@ -138,22 +138,22 @@
       "combined_score": 75.4
     },
     {
-      "title": "FMCG Stock Jumps After NCLT Approves Merger with Milk Mantra By Trade Brains - Investing.com India",
-      "source": "Investing.com India",
-      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNY3RERFkzNTVBU0FEcXQwTHEtbzFUREtjT0gxTFk1WnB2UVk2V2dMQk1UemVPdlBENndwcGpjb2ZneEctSGlCSkdUX0RvMVdtczYwMDd1aG1zVDBHU1VJV29uUjl3TzdyckcxZFZCa3JvTzdaaXdDWVV0MGM5dW5yTmdfV2NMbzQ1WHJKdTFZazNvT0ExX09qMlRaeXlNTEkzT3hLeVhDUU02R0NQV1duZGw5c1dnRnM?oc=5",
-      "published_date": "2026-03-12",
-      "summary": "FMCG Stock Jumps After NCLT Approves Merger with Milk Mantra By Trade Brains Investing.com India",
+      "title": "FMCG stock jumps after NCLT approves merger with Milk Mantra - MSN",
+      "source": "MSN",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNSThvLUYtMmI5VGN2cHNRRG50c09JZkluZVRqVDluYmt4SEJXUnJVSzVnVDVrbFFpb2tmNlBFVmlqSjcwOWVRdGZoZjFYZnRITHNiYlZuWFpZTTJsUkFSNlhFaHc2QWxONEtQUUROWWRFT2YxTGhpR2FBYlBSUTRROV9zb2RwNkJtUWhkQTQxMlhKRVEzLXYxUnk5U2VTNVUzdTlfNmZuMlg2d2o5TWJ0djZn?oc=5",
+      "published_date": "2026-03-23",
+      "summary": "FMCG stock jumps after NCLT approves merger with Milk Mantra MSN",
       "deal_type": "M&A",
       "deal_value": "",
       "buyer": "",
       "target": "Milk Mantra",
       "sector": "",
       "region": "",
-      "relevance_score": 93,
+      "relevance_score": 88,
       "credibility_score": 40,
       "credibility_tier": "Unknown",
       "is_low_credibility": true,
-      "combined_score": 71.8
+      "combined_score": 68.8
     },
     {
       "title": "Henkel AG & Co. KGaA (Vz.) stock gains on Olaplex acquisition talks and sustainability push amid CEO - AD HOC NEWS",
