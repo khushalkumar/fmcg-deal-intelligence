@@ -1,103 +1,66 @@
 {
-  "generated_at": "2026-06-15 15:10:43",
+  "generated_at": "2026-07-01 13:22:37",
   "title": "FMCG Deal Intelligence Weekly",
   "subtitle": "M&A, Investments & Strategic Moves in Consumer Goods",
   "stats": {
-    "total_ingested": 10,
+    "total_ingested": 7,
     "exact_duplicates_removed": 0,
-    "near_duplicates_removed": 0,
-    "after_dedup": 10,
-    "irrelevant_filtered": 8,
-    "after_relevance": 2,
-    "low_credibility_flagged": 2,
-    "final_count": 2,
+    "near_duplicates_removed": 1,
+    "after_dedup": 6,
+    "irrelevant_filtered": 5,
+    "after_relevance": 1,
+    "low_credibility_flagged": 0,
+    "final_count": 1,
     "source_breakdown": {
-      "Food & Beverage Outlook": 1,
-      "TradingView": 1
+      "Reuters": 1
     },
     "deal_type_breakdown": {
-      "M&A": 2
+      "M&A": 1
     },
-    "processing_time_seconds": 20.78
+    "processing_time_seconds": 14.26
   },
-  "total_deals": 2,
+  "total_deals": 1,
   "deal_type_counts": {
-    "M&A": 2
+    "M&A": 1
   },
   "deals": [
     {
-      "title": "Disaronno Group Completes Acquisition of Amaro Averna and Zedda Piras - Food & Beverage Outlook",
-      "source": "Food & Beverage Outlook",
-      "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOSjZBNmFCYThtLVFlT25WQnlmLXRBX0RoWFNsVzNlNi1lX29BREJaZzV6M2JVdVN1TExDSmg1QWZROU9BUzVlMC1NQ0NDSmJwSU5FT0p0RGFvcjBQQUp6RVFKOHlQM21pVHRSYloteEhwclAtaWp2OXlwb2tmTFFWZGZ4cENIYkxWTUNWS2Z0OVR2aEJCc3dfM1RsTzN6SHRMS1A0MFN1Vld6VDRJOTBmeHdhUkhyb1ZuUFF6ZlpwWDZ5T1lX?oc=5",
-      "published_date": "2026-06-03",
-      "summary": "Disaronno Group Completes Acquisition of Amaro Averna and Zedda Piras Food & Beverage Outlook",
+      "title": "Danone to tap protein demand in Asia by buying Australia's Made - Reuters",
+      "source": "Reuters",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOM0wyM2F2VWVzZ21GdlBFbkx3dlhvYlQzbTNVUDBKMnRBSjcxdU1VRUVPQ2tnTmN0OGY1eHBjaDF5Uzh0dk1pMG96QV9TbjIxT0ppUVRXcGx5ZFBIOEx2X3JDcXpMdjZaTkZ1ME43TFZfcjRRYWZMSFlldXFtX21yVC1oQVRnVGZVeEk5ZGJ6TzdWN2dxdHFlZnlkSDdreS1EVXBqUVRqaFhRelNjc1dn?oc=5",
+      "published_date": "2026-06-22",
+      "summary": "Danone to tap protein demand in Asia by buying Australia's Made Reuters",
       "deal_type": "M&A",
       "deal_value": "",
-      "buyer": "Disaronno Group",
-      "target": "Amaro Averna and Zedda Piras",
-      "sector": "",
-      "region": "",
-      "relevance_score": 98,
-      "credibility_score": 40,
-      "credibility_tier": "Unknown",
-      "is_low_credibility": true,
-      "combined_score": 74.8
-    },
-    {
-      "title": "Libas Consumer Products Proposes Acquisition Of 51% Equity Stake In La Rambla Lifestyle - TradingView",
-      "source": "TradingView",
-      "url": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxQa3VnLUJVU1NIZnl0b0E3VHV1SVppRXZfcktGdWFxOVBDUmN4ZldCdWEtM09sbUxlVm54RlMxa3FfcThkOVlpRVhORVk0SW9CT2FOdXlhenZGcTQ4a2xJRzJWb1RkcUlpQjN6NFVxbk8yaVJHUndFT2hCTG1jSTJ0cVhma2lGNHV6clBPaHdhbzVKMGo2bWVVR3FEbjBDY1BmYTEzSUZzeWkxcmo4YlJ5cEJBVVgtcHNPeVpFcFZrMFF1NGxYM3dpc0t0QmlmT3JQNEhSYndnTWU5dHNoalJ2VktoUTVOc0tlcnVUVg?oc=5",
-      "published_date": "2026-06-08",
-      "summary": "Libas Consumer Products Proposes Acquisition Of 51% Equity Stake In La Rambla Lifestyle TradingView",
-      "deal_type": "M&A",
-      "deal_value": "",
-      "buyer": "Libas Consumer Products",
-      "target": "La Rambla Lifestyle",
+      "buyer": "Danone",
+      "target": "Made",
       "sector": "",
       "region": "",
       "relevance_score": 96,
-      "credibility_score": 40,
-      "credibility_tier": "Unknown",
-      "is_low_credibility": true,
-      "combined_score": 73.6
+      "credibility_score": 95,
+      "credibility_tier": "Tier 1 — Premier",
+      "is_low_credibility": false,
+      "combined_score": 95.6
     }
   ],
   "top_deals": [
     {
-      "title": "Disaronno Group Completes Acquisition of Amaro Averna and Zedda Piras - Food & Beverage Outlook",
-      "source": "Food & Beverage Outlook",
-      "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOSjZBNmFCYThtLVFlT25WQnlmLXRBX0RoWFNsVzNlNi1lX29BREJaZzV6M2JVdVN1TExDSmg1QWZROU9BUzVlMC1NQ0NDSmJwSU5FT0p0RGFvcjBQQUp6RVFKOHlQM21pVHRSYloteEhwclAtaWp2OXlwb2tmTFFWZGZ4cENIYkxWTUNWS2Z0OVR2aEJCc3dfM1RsTzN6SHRMS1A0MFN1Vld6VDRJOTBmeHdhUkhyb1ZuUFF6ZlpwWDZ5T1lX?oc=5",
-      "published_date": "2026-06-03",
-      "summary": "Disaronno Group Completes Acquisition of Amaro Averna and Zedda Piras Food & Beverage Outlook",
+      "title": "Danone to tap protein demand in Asia by buying Australia's Made - Reuters",
+      "source": "Reuters",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOM0wyM2F2VWVzZ21GdlBFbkx3dlhvYlQzbTNVUDBKMnRBSjcxdU1VRUVPQ2tnTmN0OGY1eHBjaDF5Uzh0dk1pMG96QV9TbjIxT0ppUVRXcGx5ZFBIOEx2X3JDcXpMdjZaTkZ1ME43TFZfcjRRYWZMSFlldXFtX21yVC1oQVRnVGZVeEk5ZGJ6TzdWN2dxdHFlZnlkSDdreS1EVXBqUVRqaFhRelNjc1dn?oc=5",
+      "published_date": "2026-06-22",
+      "summary": "Danone to tap protein demand in Asia by buying Australia's Made Reuters",
       "deal_type": "M&A",
       "deal_value": "",
-      "buyer": "Disaronno Group",
-      "target": "Amaro Averna and Zedda Piras",
-      "sector": "",
-      "region": "",
-      "relevance_score": 98,
-      "credibility_score": 40,
-      "credibility_tier": "Unknown",
-      "is_low_credibility": true,
-      "combined_score": 74.8
-    },
-    {
-      "title": "Libas Consumer Products Proposes Acquisition Of 51% Equity Stake In La Rambla Lifestyle - TradingView",
-      "source": "TradingView",
-      "url": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxQa3VnLUJVU1NIZnl0b0E3VHV1SVppRXZfcktGdWFxOVBDUmN4ZldCdWEtM09sbUxlVm54RlMxa3FfcThkOVlpRVhORVk0SW9CT2FOdXlhenZGcTQ4a2xJRzJWb1RkcUlpQjN6NFVxbk8yaVJHUndFT2hCTG1jSTJ0cVhma2lGNHV6clBPaHdhbzVKMGo2bWVVR3FEbjBDY1BmYTEzSUZzeWkxcmo4YlJ5cEJBVVgtcHNPeVpFcFZrMFF1NGxYM3dpc0t0QmlmT3JQNEhSYndnTWU5dHNoalJ2VktoUTVOc0tlcnVUVg?oc=5",
-      "published_date": "2026-06-08",
-      "summary": "Libas Consumer Products Proposes Acquisition Of 51% Equity Stake In La Rambla Lifestyle TradingView",
-      "deal_type": "M&A",
-      "deal_value": "",
-      "buyer": "Libas Consumer Products",
-      "target": "La Rambla Lifestyle",
+      "buyer": "Danone",
+      "target": "Made",
       "sector": "",
       "region": "",
       "relevance_score": 96,
-      "credibility_score": 40,
-      "credibility_tier": "Unknown",
-      "is_low_credibility": true,
-      "combined_score": 73.6
+      "credibility_score": 95,
+      "credibility_tier": "Tier 1 — Premier",
+      "is_low_credibility": false,
+      "combined_score": 95.6
     }
   ]
 }
