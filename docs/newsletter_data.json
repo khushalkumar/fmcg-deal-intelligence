@@ -1,66 +1,103 @@
 {
-  "generated_at": "2026-07-01 13:22:37",
+  "generated_at": "2026-07-15 11:14:10",
   "title": "FMCG Deal Intelligence Weekly",
   "subtitle": "M&A, Investments & Strategic Moves in Consumer Goods",
   "stats": {
-    "total_ingested": 7,
+    "total_ingested": 4,
     "exact_duplicates_removed": 0,
-    "near_duplicates_removed": 1,
-    "after_dedup": 6,
-    "irrelevant_filtered": 5,
-    "after_relevance": 1,
-    "low_credibility_flagged": 0,
-    "final_count": 1,
+    "near_duplicates_removed": 0,
+    "after_dedup": 4,
+    "irrelevant_filtered": 2,
+    "after_relevance": 2,
+    "low_credibility_flagged": 1,
+    "final_count": 2,
     "source_breakdown": {
-      "Reuters": 1
+      "Business Insider Africa": 1,
+      "Business News Nigeria": 1
     },
     "deal_type_breakdown": {
-      "M&A": 1
+      "Investment": 2
     },
-    "processing_time_seconds": 14.26
+    "processing_time_seconds": 10.27
   },
-  "total_deals": 1,
+  "total_deals": 2,
   "deal_type_counts": {
-    "M&A": 1
+    "Investment": 2
   },
   "deals": [
     {
-      "title": "Danone to tap protein demand in Asia by buying Australia's Made - Reuters",
-      "source": "Reuters",
-      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOM0wyM2F2VWVzZ21GdlBFbkx3dlhvYlQzbTNVUDBKMnRBSjcxdU1VRUVPQ2tnTmN0OGY1eHBjaDF5Uzh0dk1pMG96QV9TbjIxT0ppUVRXcGx5ZFBIOEx2X3JDcXpMdjZaTkZ1ME43TFZfcjRRYWZMSFlldXFtX21yVC1oQVRnVGZVeEk5ZGJ6TzdWN2dxdHFlZnlkSDdreS1EVXBqUVRqaFhRelNjc1dn?oc=5",
-      "published_date": "2026-06-22",
-      "summary": "Danone to tap protein demand in Asia by buying Australia's Made Reuters",
-      "deal_type": "M&A",
-      "deal_value": "",
-      "buyer": "Danone",
-      "target": "Made",
+      "title": "Indian billionaire Ravi Jaipuria joins Dangote and Dewji with $32 million investment in a 52-acre beverage plant in East Africa - Business Insider Africa",
+      "source": "Business Insider Africa",
+      "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxOYjJMTmhWZ3JkYk5EanVlb0tMaXhEcFVHbVBNQ2pzRWhBNm5tMThyY1dZTlVMTTBvcW1GRFlCT1VLQjZvWTFkYjZwVXRyRmpDQ3FMc3l2WWstZ0o0ZEVtdnlqVGJkVVhZV0owQnd1NGk1NXRLTE16UVhFbWJkdllsVnQwZUxwYkhnQ2V6UUZubVN5MG1kOHZzR0xpQTYzRjdHT2Y4dFdrbHFtOEZOcktIQ3RNa21ESDlES3dMYUZKY0pVOVNPQzAwU0RjX1B6VmUx?oc=5",
+      "published_date": "2026-07-08",
+      "summary": "Indian billionaire Ravi Jaipuria joins Dangote and Dewji with $32 million investment in a 52-acre beverage plant in East Africa Business Insider Africa",
+      "deal_type": "Investment",
+      "deal_value": "$32 million",
+      "buyer": "Ravi Jaipuria",
+      "target": "52-acre beverage plant in East Africa",
       "sector": "",
       "region": "",
-      "relevance_score": 96,
-      "credibility_score": 95,
-      "credibility_tier": "Tier 1 — Premier",
+      "relevance_score": 88,
+      "credibility_score": 82,
+      "credibility_tier": "Tier 2 — Reputable",
       "is_low_credibility": false,
-      "combined_score": 95.6
+      "combined_score": 85.6
+    },
+    {
+      "title": "Nigeria’s industrial base gets boost as Bogo spikes FMCG sector with N20bn investment - Business News Nigeria",
+      "source": "Business News Nigeria",
+      "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPaUJiZVQxLTFlYnRpVzBEeDhJbzJ0LVB0YTA3eTNYLU9HMUFPc1k0RGR2LUJJb1FTaWFDbU1UOHZxTU8wMEVXSHE2T0JpLVhGRTJuTHRlcWpkZ28zOEg4d2h3anV3YlRFb0dvem9tam5QQ3VyX2ptdXAtd0QtYU00S3RhdS1meHhDTmplaGl1YkRkbjlocnBXYkY1dnZXWDdZd25ta2J4VXh6WU43RFFtcUFxUWpuSW83YjNlQ3V1RUphZ0NNMlBfMkFsTV9WaW5r?oc=5",
+      "published_date": "2026-07-12",
+      "summary": "Nigeria’s industrial base gets boost as Bogo spikes FMCG sector with N20bn investment Business News Nigeria",
+      "deal_type": "Investment",
+      "deal_value": "N20bn",
+      "buyer": "Bogo",
+      "target": "",
+      "sector": "",
+      "region": "",
+      "relevance_score": 93,
+      "credibility_score": 40,
+      "credibility_tier": "Unknown",
+      "is_low_credibility": true,
+      "combined_score": 71.8
     }
   ],
   "top_deals": [
     {
-      "title": "Danone to tap protein demand in Asia by buying Australia's Made - Reuters",
-      "source": "Reuters",
-      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOM0wyM2F2VWVzZ21GdlBFbkx3dlhvYlQzbTNVUDBKMnRBSjcxdU1VRUVPQ2tnTmN0OGY1eHBjaDF5Uzh0dk1pMG96QV9TbjIxT0ppUVRXcGx5ZFBIOEx2X3JDcXpMdjZaTkZ1ME43TFZfcjRRYWZMSFlldXFtX21yVC1oQVRnVGZVeEk5ZGJ6TzdWN2dxdHFlZnlkSDdreS1EVXBqUVRqaFhRelNjc1dn?oc=5",
-      "published_date": "2026-06-22",
-      "summary": "Danone to tap protein demand in Asia by buying Australia's Made Reuters",
-      "deal_type": "M&A",
-      "deal_value": "",
-      "buyer": "Danone",
-      "target": "Made",
+      "title": "Indian billionaire Ravi Jaipuria joins Dangote and Dewji with $32 million investment in a 52-acre beverage plant in East Africa - Business Insider Africa",
+      "source": "Business Insider Africa",
+      "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxOYjJMTmhWZ3JkYk5EanVlb0tMaXhEcFVHbVBNQ2pzRWhBNm5tMThyY1dZTlVMTTBvcW1GRFlCT1VLQjZvWTFkYjZwVXRyRmpDQ3FMc3l2WWstZ0o0ZEVtdnlqVGJkVVhZV0owQnd1NGk1NXRLTE16UVhFbWJkdllsVnQwZUxwYkhnQ2V6UUZubVN5MG1kOHZzR0xpQTYzRjdHT2Y4dFdrbHFtOEZOcktIQ3RNa21ESDlES3dMYUZKY0pVOVNPQzAwU0RjX1B6VmUx?oc=5",
+      "published_date": "2026-07-08",
+      "summary": "Indian billionaire Ravi Jaipuria joins Dangote and Dewji with $32 million investment in a 52-acre beverage plant in East Africa Business Insider Africa",
+      "deal_type": "Investment",
+      "deal_value": "$32 million",
+      "buyer": "Ravi Jaipuria",
+      "target": "52-acre beverage plant in East Africa",
       "sector": "",
       "region": "",
-      "relevance_score": 96,
-      "credibility_score": 95,
-      "credibility_tier": "Tier 1 — Premier",
+      "relevance_score": 88,
+      "credibility_score": 82,
+      "credibility_tier": "Tier 2 — Reputable",
       "is_low_credibility": false,
-      "combined_score": 95.6
+      "combined_score": 85.6
+    },
+    {
+      "title": "Nigeria’s industrial base gets boost as Bogo spikes FMCG sector with N20bn investment - Business News Nigeria",
+      "source": "Business News Nigeria",
+      "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPaUJiZVQxLTFlYnRpVzBEeDhJbzJ0LVB0YTA3eTNYLU9HMUFPc1k0RGR2LUJJb1FTaWFDbU1UOHZxTU8wMEVXSHE2T0JpLVhGRTJuTHRlcWpkZ28zOEg4d2h3anV3YlRFb0dvem9tam5QQ3VyX2ptdXAtd0QtYU00S3RhdS1meHhDTmplaGl1YkRkbjlocnBXYkY1dnZXWDdZd25ta2J4VXh6WU43RFFtcUFxUWpuSW83YjNlQ3V1RUphZ0NNMlBfMkFsTV9WaW5r?oc=5",
+      "published_date": "2026-07-12",
+      "summary": "Nigeria’s industrial base gets boost as Bogo spikes FMCG sector with N20bn investment Business News Nigeria",
+      "deal_type": "Investment",
+      "deal_value": "N20bn",
+      "buyer": "Bogo",
+      "target": "",
+      "sector": "",
+      "region": "",
+      "relevance_score": 93,
+      "credibility_score": 40,
+      "credibility_tier": "Unknown",
+      "is_low_credibility": true,
+      "combined_score": 71.8
     }
   ]
 }
