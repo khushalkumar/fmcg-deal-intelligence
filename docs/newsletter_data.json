@@ -1,140 +1,66 @@
 {
-  "generated_at": "2026-08-01 11:42:29",
+  "generated_at": "2026-08-15 09:29:33",
   "title": "FMCG Deal Intelligence Weekly",
   "subtitle": "M&A, Investments & Strategic Moves in Consumer Goods",
   "stats": {
-    "total_ingested": 8,
+    "total_ingested": 6,
     "exact_duplicates_removed": 0,
     "near_duplicates_removed": 0,
-    "after_dedup": 8,
+    "after_dedup": 6,
     "irrelevant_filtered": 5,
-    "after_relevance": 3,
-    "low_credibility_flagged": 2,
-    "final_count": 3,
+    "after_relevance": 1,
+    "low_credibility_flagged": 1,
+    "final_count": 1,
     "source_breakdown": {
-      "CNBC": 1,
-      "macaubusiness.com": 1,
-      "PR Newswire": 1
+      "TradingView": 1
     },
     "deal_type_breakdown": {
-      "M&A": 3
+      "M&A": 1
     },
-    "processing_time_seconds": 13.25
+    "processing_time_seconds": 11.44
   },
-  "total_deals": 3,
+  "total_deals": 1,
   "deal_type_counts": {
-    "M&A": 3
+    "M&A": 1
   },
   "deals": [
     {
-      "title": "Snacks maker Utz Brands to be taken private in $2.9 billion deal - CNBC",
-      "source": "CNBC",
-      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOXzlna2ppTjc0RHJDOUstcWlSSHd4Vm9HS0hjVWZXemtmMGJhUmdUbXhUZFRCWWRnSzZQblRCV0NhZTdDb2R0QmphV19pc0t1cjBWQmpFbGRRYjkxYW41cXhVRGd0QWVmQmtaNGt5NUQ4ZjBjS2xNcGdMUVo0Z09pSnQ2NTNGTC1xM1NJYW5PWjlIaEM3UGdSU1JNSGRJc0FxcDFyTEhxUdIBrAFBVV95cUxQS09fWkZQeUoycDktN1pmUThQeHpKM2cydnJvdXpUUnc2cW5yY2JMWmE2Z0gyMzJsYUpMTDhDZUpnVXlacW45dTlFZWt1M3ZhNWpkWmFZYWdkeE1jclR4dkhnVnowbUtPVVFnMDFHa3YzOWNYLTVkMmdFSHdRdFUySGxUQ25OeFMxRGwtRnluQ0dIZjBZWE8waFhGSm5JdXFNME1ELUluOW5QRkdI?oc=5",
-      "published_date": "2026-07-21",
-      "summary": "Snacks maker Utz Brands to be taken private in $2.9 billion deal CNBC",
-      "deal_type": "M&A",
-      "deal_value": "$2.9 billion",
-      "buyer": "",
-      "target": "Utz Brands",
-      "sector": "",
-      "region": "",
-      "relevance_score": 99,
-      "credibility_score": 82,
-      "credibility_tier": "Tier 2 — Reputable",
-      "is_low_credibility": false,
-      "combined_score": 92.2
-    },
-    {
-      "title": "Wipro Consumer Care Strengthens FMCG Leading Position in APAC Market with the Acquisition of S Brands - macaubusiness.com",
-      "source": "macaubusiness.com",
-      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNazE5WUxXbVlIWENqdWFtSWZDQVQtRnRTalFjU2ZVVTlpRTRwWko1cmFLYjFFNTREQVRic1JWZEVndWhyWTlZVE92bFdrZjJiNkdENVpWdjk4LUl5b2Naa3dtUVRVZHBQbHUxWTg0dERpQTlCbnYzY2lKR19OZC1aS2VGdU1XVUMxNW5BdWRSNkFXaE5rZUlQeTBtOGx1c1lyN0ZRdzhZR0JVRnhhSFViUXZ2dkpZV2luMU9OVkJtbGNYRVdDN2dF?oc=5",
-      "published_date": "2026-07-31",
-      "summary": "Wipro Consumer Care Strengthens FMCG Leading Position in APAC Market with the Acquisition of S Brands macaubusiness.com",
+      "title": "Charoen Pokphand Foods Reports Acquisition Of Unit Engaged In Beverage Business In Vietnam - TradingView",
+      "source": "TradingView",
+      "url": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxPVGNoMlcydW50T05POUhRa19JMDd1eXVaTmE4ajV0WFlGMlM5NTNOY3F3TXJuV2tJbVhHZ1hiVVI5a3ZBOFNkeUdtam43R0l5THRFay0zbW9NWmtQSjJHQTFyN0ZMYmN1RWNORnc5d3VoM1JlV044MlB1YmN2NHF2SG5fUHlqMnZKVzVFTUQtcjlHTVVkOVNqVkNLT1JiR3BrV0ZmWkhNcEpaWmlIYjZXd1kzNGlCbE5OV2M1ZVllckY3aDBqNmQ5Q0pwMVpWNExjd1N4Uy1IMGlHLWhOLUpaUjVyV2NPMjgwMERmQW93S2VuQQ?oc=5",
+      "published_date": "2026-08-14",
+      "summary": "Charoen Pokphand Foods Reports Acquisition Of Unit Engaged In Beverage Business In Vietnam TradingView",
       "deal_type": "M&A",
       "deal_value": "",
-      "buyer": "Wipro Consumer Care",
-      "target": "S Brands",
+      "buyer": "Charoen Pokphand Foods",
+      "target": "unit engaged in beverage business in Vietnam",
       "sector": "",
       "region": "",
-      "relevance_score": 98,
+      "relevance_score": 95,
       "credibility_score": 40,
       "credibility_tier": "Unknown",
       "is_low_credibility": true,
-      "combined_score": 74.8
-    },
-    {
-      "title": "Truelink Capital Completes Acquisition of Lyons Magnus, a Leading Developer and Manufacturer of Specialty Ingredients, Beverage, and Nutrition Solutions - PR Newswire",
-      "source": "PR Newswire",
-      "url": "https://news.google.com/rss/articles/CBMirgJBVV95cUxOeFRtam5ubkFVczVYcmtvN0RPRFUweHYwM3RhX05tLUE1RWQ5SXdTSElMU1dkcl9UV0R4QnQ5YjB3aWxiM19mbGNXN2pQLXlKYTg2emlfbG0yYkhRaC1CV1B4OUVnd3NkR2t5V1FPVGtpN0FiTDc3TW9CeWZxakhrcEEtMTh2TFVseTdNb3R1UnM3MlpVY1Zzb19pTjRoTHFZU3RoQkRVTEdBXzc4Z01tN2ItamVrQnpSdUdLTW5udDc1TV9iQlFadjZjZlY0eWtIR211ZEQ1NElJbXpvck9GZW1LblE4MndUeno5RC1Uem9xU1NCNUUwYmduV0kxeW5fMjBZQ1REbkRsVTZ0UDMtY3FFU3BBTEsyMTlRdkxGZWJ3MmlmVDRuTExuVGR2QQ?oc=5",
-      "published_date": "2026-07-20",
-      "summary": "Truelink Capital Completes Acquisition of Lyons Magnus, a Leading Developer and Manufacturer of Specialty Ingredients, Beverage, and Nutrition Solutions PR Newswire",
-      "deal_type": "M&A",
-      "deal_value": "",
-      "buyer": "Truelink Capital",
-      "target": "Lyons Magnus",
-      "sector": "",
-      "region": "",
-      "relevance_score": 98,
-      "credibility_score": 40,
-      "credibility_tier": "Unknown",
-      "is_low_credibility": true,
-      "combined_score": 74.8
+      "combined_score": 73.0
     }
   ],
   "top_deals": [
     {
-      "title": "Snacks maker Utz Brands to be taken private in $2.9 billion deal - CNBC",
-      "source": "CNBC",
-      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOXzlna2ppTjc0RHJDOUstcWlSSHd4Vm9HS0hjVWZXemtmMGJhUmdUbXhUZFRCWWRnSzZQblRCV0NhZTdDb2R0QmphV19pc0t1cjBWQmpFbGRRYjkxYW41cXhVRGd0QWVmQmtaNGt5NUQ4ZjBjS2xNcGdMUVo0Z09pSnQ2NTNGTC1xM1NJYW5PWjlIaEM3UGdSU1JNSGRJc0FxcDFyTEhxUdIBrAFBVV95cUxQS09fWkZQeUoycDktN1pmUThQeHpKM2cydnJvdXpUUnc2cW5yY2JMWmE2Z0gyMzJsYUpMTDhDZUpnVXlacW45dTlFZWt1M3ZhNWpkWmFZYWdkeE1jclR4dkhnVnowbUtPVVFnMDFHa3YzOWNYLTVkMmdFSHdRdFUySGxUQ25OeFMxRGwtRnluQ0dIZjBZWE8waFhGSm5JdXFNME1ELUluOW5QRkdI?oc=5",
-      "published_date": "2026-07-21",
-      "summary": "Snacks maker Utz Brands to be taken private in $2.9 billion deal CNBC",
-      "deal_type": "M&A",
-      "deal_value": "$2.9 billion",
-      "buyer": "",
-      "target": "Utz Brands",
-      "sector": "",
-      "region": "",
-      "relevance_score": 99,
-      "credibility_score": 82,
-      "credibility_tier": "Tier 2 — Reputable",
-      "is_low_credibility": false,
-      "combined_score": 92.2
-    },
-    {
-      "title": "Wipro Consumer Care Strengthens FMCG Leading Position in APAC Market with the Acquisition of S Brands - macaubusiness.com",
-      "source": "macaubusiness.com",
-      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNazE5WUxXbVlIWENqdWFtSWZDQVQtRnRTalFjU2ZVVTlpRTRwWko1cmFLYjFFNTREQVRic1JWZEVndWhyWTlZVE92bFdrZjJiNkdENVpWdjk4LUl5b2Naa3dtUVRVZHBQbHUxWTg0dERpQTlCbnYzY2lKR19OZC1aS2VGdU1XVUMxNW5BdWRSNkFXaE5rZUlQeTBtOGx1c1lyN0ZRdzhZR0JVRnhhSFViUXZ2dkpZV2luMU9OVkJtbGNYRVdDN2dF?oc=5",
-      "published_date": "2026-07-31",
-      "summary": "Wipro Consumer Care Strengthens FMCG Leading Position in APAC Market with the Acquisition of S Brands macaubusiness.com",
+      "title": "Charoen Pokphand Foods Reports Acquisition Of Unit Engaged In Beverage Business In Vietnam - TradingView",
+      "source": "TradingView",
+      "url": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxPVGNoMlcydW50T05POUhRa19JMDd1eXVaTmE4ajV0WFlGMlM5NTNOY3F3TXJuV2tJbVhHZ1hiVVI5a3ZBOFNkeUdtam43R0l5THRFay0zbW9NWmtQSjJHQTFyN0ZMYmN1RWNORnc5d3VoM1JlV044MlB1YmN2NHF2SG5fUHlqMnZKVzVFTUQtcjlHTVVkOVNqVkNLT1JiR3BrV0ZmWkhNcEpaWmlIYjZXd1kzNGlCbE5OV2M1ZVllckY3aDBqNmQ5Q0pwMVpWNExjd1N4Uy1IMGlHLWhOLUpaUjVyV2NPMjgwMERmQW93S2VuQQ?oc=5",
+      "published_date": "2026-08-14",
+      "summary": "Charoen Pokphand Foods Reports Acquisition Of Unit Engaged In Beverage Business In Vietnam TradingView",
       "deal_type": "M&A",
       "deal_value": "",
-      "buyer": "Wipro Consumer Care",
-      "target": "S Brands",
+      "buyer": "Charoen Pokphand Foods",
+      "target": "unit engaged in beverage business in Vietnam",
       "sector": "",
       "region": "",
-      "relevance_score": 98,
+      "relevance_score": 95,
       "credibility_score": 40,
       "credibility_tier": "Unknown",
       "is_low_credibility": true,
-      "combined_score": 74.8
-    },
-    {
-      "title": "Truelink Capital Completes Acquisition of Lyons Magnus, a Leading Developer and Manufacturer of Specialty Ingredients, Beverage, and Nutrition Solutions - PR Newswire",
-      "source": "PR Newswire",
-      "url": "https://news.google.com/rss/articles/CBMirgJBVV95cUxOeFRtam5ubkFVczVYcmtvN0RPRFUweHYwM3RhX05tLUE1RWQ5SXdTSElMU1dkcl9UV0R4QnQ5YjB3aWxiM19mbGNXN2pQLXlKYTg2emlfbG0yYkhRaC1CV1B4OUVnd3NkR2t5V1FPVGtpN0FiTDc3TW9CeWZxakhrcEEtMTh2TFVseTdNb3R1UnM3MlpVY1Zzb19pTjRoTHFZU3RoQkRVTEdBXzc4Z01tN2ItamVrQnpSdUdLTW5udDc1TV9iQlFadjZjZlY0eWtIR211ZEQ1NElJbXpvck9GZW1LblE4MndUeno5RC1Uem9xU1NCNUUwYmduV0kxeW5fMjBZQ1REbkRsVTZ0UDMtY3FFU3BBTEsyMTlRdkxGZWJ3MmlmVDRuTExuVGR2QQ?oc=5",
-      "published_date": "2026-07-20",
-      "summary": "Truelink Capital Completes Acquisition of Lyons Magnus, a Leading Developer and Manufacturer of Specialty Ingredients, Beverage, and Nutrition Solutions PR Newswire",
-      "deal_type": "M&A",
-      "deal_value": "",
-      "buyer": "Truelink Capital",
-      "target": "Lyons Magnus",
-      "sector": "",
-      "region": "",
-      "relevance_score": 98,
-      "credibility_score": 40,
-      "credibility_tier": "Unknown",
-      "is_low_credibility": true,
-      "combined_score": 74.8
+      "combined_score": 73.0
     }
   ]
 }
